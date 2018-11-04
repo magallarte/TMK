@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit DonationBag{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Modifier un sac de don</h1>
+        <form class="form-group" method="post">
+        {{ include('donation_bag/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+        </form>
+        <a href="{{ path('donation_bag_index') }}">Retour à la liste</a>
+        <br>
+        {{ include('donation_bag/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

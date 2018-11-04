@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Je m'informe{% endblock %}
+
+{% block body %}
+
+<!-- Section 1 :  Photo + accroche -->
+<div id="section1" class="jeminforme-image section1-image">
+    <h3 class="white section1-itle">Les dernières initiatives dans le domaine du recyclage textile ...</h3>
+    <a href="#section2"><img src="http://127.0.0.1:8000/images/Icone_Chevron.png"></a>
+</div>
+<br>
+
+<div class="container">
+
+    <!-- Section 2 :  2 arguments -->
+        <div id="section2">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 m-3">
+                    <img src="http://127.0.0.1:8000/images/Icone_CAFE_134x74.png" class="mb-2">
+                    <h3 class="orange mb-2">Café "Couture"</h3>
+                    <p>Vous êtes une passionnée de couture et avez envie de partager vos connaissances et vos astuces ? Le local de Troc & Mode est à votre disposition pour vous accueillir (vous et votre machine !) et coudre avec d'autres passionnées !<br> Autour d'un café ...</p>
+                </div>
+                <div class="col-lg-5 m-3">
+                    <img src="http://127.0.0.1:8000/images/Icone_MACHINE_133x74.png" class="mb-2">
+                        <h3 class="orange mb-2">Atelier "couture"</h3>
+                        <p>Vous êtes couturière débutante et vous avez envie d'aprrendre quelques techniques de couture ? Inscrivez vous à un des ateliers et découvrer comment réparer, transformer ou donner une 2ème vie à vos vêtements ! <br> Ou bien créer des accessoires à partir de tissus recyclés !</p>
+                </div>
+            </div>
+            <br>
+            <a href="#section3"><img src="http://127.0.0.1:8000/images/Icone_Chevron.png"></a>
+            <br>
+            <br>
+        </div>
+    
+      <!-- Section 3 : Où et quand -->
+      <div class="row justify-content-center">
+        <div class="col-lg-5 my-3 mx-4">
+          <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-lg-4">
+             <img src="http://127.0.0.1:8000/images/Icone_LIEU_46x74.png">
+            </div>
+            <div class="col-lg-8">
+                <p>L'adresse de du local sera communiqué début 2019.</p>
+            </div>  
+          </div>
+        </div>
+        <div class="col-lg-5 my-3 mx-4">
+          <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-lg-4">
+                <img src="http://127.0.0.1:8000/images/Icone_CALENDRIER_78x74.png">
+            </div>
+            <div class="col-lg-8">
+                <p>Les jours des ateliers seront communiqués début 2019</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+
+    <br>
+    <h2>Articles </h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Titre</th>
+                <th>Source</th>
+                <th>Lien</th>
+                <th>Contenu</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for new in news %}
+            <tr>
+                <td><img src={{ asset('images/' ~ news.news_picture)}} height="50px"/></td>
+                <td>{{ news.news_title }}</td>
+                <td>{{ news.news_source }}</td>
+                <td>{{ news.news_url }}</td>
+                <td>{{ news.news_content }}</td>
+                <td>{{ news.news_editDate ? news.news_editDate|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('news_show', {'id': news.id}) }}">Voir la fiche</a>
+                    {% if app.session.get('user') %}
+                    {% for role in app.session.get('user').MemberRole %}
+                        {% if role.id ==  "6" %}
+                            <a href="{{ path('news_edit', {'id': news.id}) }}">Modifier la fiche</a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Aucun article trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% if app.session.get('user') %}
+        {% for role in app.session.get('user').MemberRole %}
+            {% if role.id ==  "6" %}
+                <a href="{{ path('news_new') }}">Créer un nouvel article</a>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    
+</div> 
+
+{% endblock %}

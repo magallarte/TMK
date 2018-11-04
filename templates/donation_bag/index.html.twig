@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des sacs de dons{% endblock %}
+
+{% block body %}
+
+    <h2>Liste des sacs de dons</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Numéro</th>
+                <th>Donnateur</th>
+                <th>Date du don</th>
+                <th>Ecole du don</th>
+                <th>Ville</th>
+                <th>Etape de préparation</th>
+                <th>Liste des articles</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for donation_bag in donation_bags %}
+            <tr>
+                <td>{{ donation_bag.id }}</td>
+                <td>{{ donation_bag.donationBag_donator.memberName }}  {{ donation_bag.donationBag_donator.memberSurName }}</td>
+                <td>{{ donation_bag.donationBagDate ? donation_bag.donationBagDate|date('d-m-Y') : '' }}</td>
+                <td>{{ donation_bag.donationBag_schoolStop.schoolName }}</td>
+                <td>{{ donation_bag.donationBag_schoolStop.schoolCity }}</td>
+                <td>{{ donation_bag.donationBag_processStatus.processStatusName }}</td>
+                <td>
+                    <ul>
+                    {% for article in donation_bag.donationBag_article_list %}
+                    <li><a href="{{ path('article_show', {'id': article.id}) }}">{{ article.articleCode}}</a></li>
+                    {% endfor %}
+                    </ul>
+                </td>
+                <td>
+                    <a href="{{ path('donation_bag_show', {'id': donation_bag.id}) }}">voir - </a>
+                    <a href="{{ path('donation_bag_edit', {'id': donation_bag.id}) }}">modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Pas de sac de don trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('donation_bag_new') }}">Créer un nouveau sac de don</a>
+{% endblock %}

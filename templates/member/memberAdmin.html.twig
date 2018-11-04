@@ -1,0 +1,61 @@
+{% extends 'base.html.twig'%}
+
+{% block body %}
+
+
+<h1>Menu ADMIN </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Données :</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Articles</td>
+                <td>
+                    <a href="{{ path('article_index') }}">voir la liste</a> 
+                </td>
+            </tr>
+            <tr>
+                <td>Membres</td>
+                <td>
+                    <a href="{{ path('member_index') }}">voir la liste</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Sacs de dons</td>
+                <td>
+                    <a href="{{ path('donation_bag_index') }}">voir la liste</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Sacs de livraison</td>
+                <td>
+                    <a href="{{ path('delivery_bag_index') }}">voir la liste</a>  
+                </td>
+            </tr>
+            <tr>
+                <td>Tournées des écoles</td>
+                <td>
+                    <a href="{{ path('school_stop_index') }}">voir la liste</a> 
+                </td>
+            </tr>
+            <tr>
+                <td>News</td>
+                <td>
+                    <a href="{{ path('news_index') }}">voir la liste</a> 
+                </td>
+            </tr>
+            <tr>
+                <td>Ateliers</td>
+                <td>
+                    <a href="{{ path('workshop_index') }}">voir la liste</a> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

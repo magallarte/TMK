@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Je participe{% endblock %}
+
+{% block body %}
+
+<!-- Section 1 :  Photo + accroche -->
+<div id="section1" class="jeparticipe-image section1-image">
+    <h3 class="blue section1-title">Découvrer ou partager une passion ...</h3>
+    <a href="#section2"><img src="http://127.0.0.1:8000/images/Icone_Chevron.png"></a>
+</div>
+<br>
+
+<div class="container">
+
+    <!-- Section 2 :  2 arguments -->
+        <div id="section2">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 m-3">
+                    <img src="http://127.0.0.1:8000/images/Icone_CAFE_134x74.png" class="mb-2">
+                    <h3 class="orange mb-2">Café "Couture"</h3>
+                    <p>Vous êtes une passionnée de couture et avez envie de partager vos connaissances et vos astuces ? Le local de Troc & Mode est à votre disposition pour vous accueillir (vous et votre machine !) et coudre avec d'autres passionnées !<br> Autour d'un café ...</p>
+                </div>
+                <div class="col-lg-5 m-3">
+                    <img src="http://127.0.0.1:8000/images/Icone_MACHINE_133x74.png" class="mb-2">
+                        <h3 class="orange mb-2">Atelier "couture"</h3>
+                        <p>Vous êtes couturière débutante et vous avez envie d'aprrendre quelques techniques de couture ? Inscrivez vous à un des ateliers et découvrer comment réparer, transformer ou donner une 2ème vie à vos vêtements ! <br> Ou bien créer des accessoires à partir de tissus recyclés !</p>
+                </div>
+            </div>
+            <br>
+            <a href="#section3"><img src="http://127.0.0.1:8000/images/Icone_Chevron.png"></a>
+            <br>
+            <br>
+        </div>
+    
+      <!-- Section 3 : Où et quand -->
+      <div class="row justify-content-center">
+        <div class="col-lg-5 my-3 mx-4">
+          <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-lg-4">
+             <img src="http://127.0.0.1:8000/images/Icone_LIEU_46x74.png">
+            </div>
+            <div class="col-lg-8">
+                <p>L'adresse de du local sera communiqué début 2019.</p>
+            </div>  
+          </div>
+        </div>
+        <div class="col-lg-5 my-3 mx-4">
+          <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-lg-4">
+                <img src="http://127.0.0.1:8000/images/Icone_CALENDRIER_78x74.png">
+            </div>
+            <div class="col-lg-8">
+                <p>Les jours des ateliers seront communiqués début 2019</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+
+    <br>
+    <h2>Ateliers "Couture" à venir </h2>
+    <table class="table">
+        <thead>
+            <tr>
+                {# <th>Id</th> #}
+                <th>Date / Heure</th>
+                <th>Thème</th>
+                <th>Prix</th>
+                <th>Lieu</th>
+                <th>Image</th>
+                <th>Formateur</th>
+                    {% if app.session.get('user') %}
+                        {% for role in app.session.get('user').MemberRole %}
+                            {% if role.id ==  "6" %}
+                            <th>Personnes inscrites</th>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                <th>Inscription</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for workshop in workshops %}
+            <tr>
+                {# <td>{{ workshop.id }}</td> #}
+                <td>{{ workshop.workshopDate ? workshop.workshopDate|date('Y-m-d H:i') : '' }}</td>
+                <td>{{ workshop.workshopTheme }}</td>
+                <td>{{ workshop.workshopFee }}</td>
+                <td>{{ workshop.workshopPlace }}</td>
+                <td><img src={{ asset('images/' ~ workshop.workshopPicture)}} height="50px"/></td>
+                 {# <img class="d-block w-100 img-fluid" src="{{ asset('uploads/pictures/' ~ article.articlePicture1)}}" alt="First slide"> #}
+                        </div>
+                {# <td>{{ workshop.workshopPicture }}</td> #}
+                <td>{{ workshop.workshopTrainer.MemberSurname }} {{ workshop.workshopTrainer.MemberName }}</td>
+                {% if app.session.get('user') %}
+                    {% for role in app.session.get('user').MemberRole %}
+                        {% if role.id ==  "6" %}
+                            {% for trainee in workshop.workshopTraineesList %}
+                            <td>{{trainee.MemberSurname}} {{trainee.MemberName}}</td>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                <td>
+                    <a href="{{ path('workshop_book', {'id': workshop.id}) }}">S'inscrire</a>
+                {% if app.session.get('user') %}
+                    {% for role in app.session.get('user').MemberRole %}
+                        {% if role.id ==  "6" %}
+                            <a href="{{ path('workshop_edit', {'id': workshop.id}) }}">Modifier la fiche</a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Aucun atelier trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% if app.session.get('user') %}
+        {% for role in app.session.get('user').MemberRole %}
+            {% if role.id ==  "6" %}
+                <a href="{{ path('workshop_new') }}">Créer un nouvel atelier</a>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    
+</div> 
+{% endblock %}

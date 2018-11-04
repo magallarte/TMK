@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des écoles{% endblock %}
+
+{% block body %}
+    <h1>Liste des écoles</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Adresse (1)</th>
+                <th>Adresse (2)</th>
+                <th>Code Postal</th>
+                <th>Ville</th>
+                <th>Mr / Mme</th>
+                <th>Directeur / Directrice</th>
+                <th>Tel</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for school in schools %}
+            <tr>
+                <td>{{ school.id }}</td>
+                <td>{{ school.schoolName }}</td>
+                <td>{{ school.schoolAddress1 }}</td>
+                <td>{{ school.schoolAddress2 }}</td>
+                <td>{{ school.schoolZipCode }}</td>
+                <td>{{ school.schoolCity }}</td>
+                <td>{{ school.schoolDirectorGender }}</td>
+                <td>{{ school.schoolDirectorName }}</td>
+                <td>{{ school.schoolDirectorTel }}</td>
+                <td>{{ school.schoolDirectorEmail }}</td>
+                <td>
+                    <a href="{{ path('school_show', {'id': school.id}) }}">voir la fiche - </a>
+                    <a href="{{ path('school_edit', {'id': school.id}) }}">éditer la fiche </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">Aucune école trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('school_new') }}">Create new</a>
+{% endblock %}
