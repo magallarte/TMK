@@ -2,17 +2,22 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\MemberRepository")
+ * @UniqueEntity(
+ *  fields={"member_email"},
+ *  message="L'email que vous utilisez est déjà utilisé"
+ * )
  */
-// * @UniqueEntity("member_email")
-class Member
+
+class Member implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -59,10 +64,8 @@ class Member
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
-     */
-    //unique=true
-     //* @Assert\Email(
-     //*      message="L'email {{ value }}  n'est pas au bon format.")
+     * @Assert\Email(message="L'email {{ value }}  n'est pas au bon format.")
+     */      
     private $member_email;
 
     /**
@@ -487,4 +490,31 @@ class Member
         return $this;
     }
 
+    // Méthodes liées à la UserInterface
+
+    public function getUserName(): ?string
+    {
+        return $this->member_email;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->member_password;
+    }
+
+    public function setPassword(string $member_password): self
+    {
+        $this->member_password = $member_password;
+
+        return $this;
+    }
+
+    public function eraseCredentials() {}
+
+    public function getSalt() {}
+
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
 }

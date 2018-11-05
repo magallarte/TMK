@@ -55,27 +55,39 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>                   
-                    <div class="collapse navbar-collapse navbarline" id="navbarResponsive">
+                    <div class="collapse navbar-collapse navbarline navbarline-right" id="navbarResponsive">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                            {% if app.session.get('user') %}
+                            {% if app.user %}
                                 {# <a class="nav-link" href="{{ path('member_show', {'id': app.session.get('user').id}) }}"> {{ app.session.get('user').MemberSurname }}</a> #}
-                                <a class="nav-link" href="/member/{{app.session.get('user').id}}">
-                                    <img class="d-none d-md-inline-block" src="http://127.0.0.1:8000/images/Icone_PROFIL.png" height="30px">
-                                    <p>{{ app.session.get('user').MemberSurname }}</p>
+                                <a class="nav-link d-none d-md-inline-block" href="/member/{{app.user.id}}">
+                                    <img class="" src="http://127.0.0.1:8000/images/Icone_PROFIL.png" height="30px">
+                                    <p>{{ app.user.MemberSurname }}</p>
+                                    <br>
                                  </a>
                             {% else %}
-                                <a class="nav-link" href="{{ path('member_setSession') }}">
-                                    <img class="d-none d-md-inline-block" src="http://127.0.0.1:8000/images/Icone_PROFIL.png" height="30px">
+                                <a class="nav-link d-none d-md-inline-block" href="{{ path('member_setSession') }}">
+                                    <img class="" src="http://127.0.0.1:8000/images/Icone_PROFIL.png" height="30px">
                                     <p>Je m'identifie</p>
+                                    <br>
+                                </a>
+                            {% endif %}
+                            </li>
+                            <li class="nav-item">
+                            {% if app.user %}
+                                <a class="nav-link d-none d-md-inline-block" href="{{ path('security_logout') }}">
+                                    <img class="" src="http://127.0.0.1:8000/images/Icone_DECONNEXION.png" height="30px">
+                                    <p>Je me déconnecte</p>
+                                    <br>
                                 </a>
                             {% endif %}
                             </li>
                             <li class="nav-item">
                             {% if app.session.get('cart') %}
-                                <a class="nav-link" href="{{ path('delivery_bag_showCart') }}">
-                                    <img class="d-none d-md-inline-block" src="http://127.0.0.1:8000/images/Icone_SAC_134x115.png" height="30px">
+                                <a class="nav-link d-none d-md-inline-block" href="{{ path('delivery_bag_showCart') }}">
+                                    <img class="" src="http://127.0.0.1:8000/images/Icone_SAC_134x115.png" height="30px">
                                     <p>Mon sac</p>
+                                    <br>
                                 </a>
                             {% endif %}
                             </li>
@@ -83,7 +95,18 @@
                                 <img class="d-none d-md-inline-block" src="http://127.0.0.1:8000/images/Icone_MENU.png" height="30px">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Menu</a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                                <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
+                                    <a class="dropdown-item d-block d-md-none d-lg-none d-xl-none" href="{{ path('member_setSession') }}">
+                                    {% if app.user %}
+                                        {{ app.user.MemberSurname }}
+                                    {% else %}
+                                        Je m'identifie
+                                    {% endif %}
+                                    </a>
+                                    <a class="dropdown-item d-block d-md-none d-lg-none d-xl-none" href="{{ path('security_logout') }}">Je me déconnecte</a>
+                                    {% if app.session.get('cart') %}
+                                    <a class="dropdown-item d-block d-md-none d-lg-none d-xl-none" href="{{ path('delivery_bag_showCart') }}">Mon sac</a>
+                                    {% endif %}
                                     <a class="dropdown-item" href="{{ path('concept_show') }}">Le concept</a>
                                     <a class="dropdown-item" href="{{ path('member_new') }}">Je m'inscris</a>
                                     <a class="dropdown-item" href="{{ path('school_stop_index') }}">Je donne</a>

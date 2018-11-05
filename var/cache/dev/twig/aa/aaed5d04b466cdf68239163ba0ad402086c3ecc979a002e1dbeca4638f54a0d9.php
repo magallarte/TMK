@@ -50,7 +50,7 @@ class __TwigTemplate_599a16859b8c659478a21f6659a656f4b8f271dbdf7dcf99d1ca194dc54
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Connection";
+        echo "Connexion";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -68,33 +68,36 @@ class __TwigTemplate_599a16859b8c659478a21f6659a656f4b8f271dbdf7dcf99d1ca194dc54
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 6, $this->source); })())) {
-            // line 7
-            echo "    <div>";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 7, $this->source); })()), "messageKey", array()), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 7, $this->source); })()), "messageData", array()), "security"), "html", null, true);
-            echo "</div>
-";
-        }
         // line 9
         echo "
 <form action=\"";
         // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login");
         echo "\" method=\"post\">
-    <label for=\"username\">Username:</label>
-    <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "\" />
-
-    <label for=\"password\">Password:</label>
-    <input type=\"password\" id=\"password\" name=\"_password\" />
-
     ";
-        // line 22
-        echo "
-    <button type=\"submit\">login</button>
+        // line 16
+        echo "    <div class=\"container\">
+        <div class=\"form-group\">
+            <input placeholder=\"Adresse email ...\" class=\"form-control\" type=\"text\" id=\"username\" required name=\"_username\" />
+        </div>
+        <div class=\"form-group\">
+            <input placeholder=\"Mot de passe ...\" class=\"form-control\" type=\"password\" id=\"password\" required name=\"_password\" />
+        </div>
+
+        ";
+        // line 28
+        echo "            ";
+        // line 29
+        echo "        
+        <input type=\"hidden\" name=\"_csrf_token\" value=\"";
+        // line 30
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
+        echo "\">
+
+        <div class=\"form-group\">
+            <button type=\"submit\">Se connecter</button>
+        </div>    
+    </div>
 </form>
 ";
         
@@ -117,35 +120,47 @@ class __TwigTemplate_599a16859b8c659478a21f6659a656f4b8f271dbdf7dcf99d1ca194dc54
 
     public function getDebugInfo()
     {
-        return array (  96 => 22,  88 => 12,  83 => 10,  80 => 9,  74 => 7,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
+        return array (  94 => 30,  91 => 29,  89 => 28,  79 => 16,  75 => 10,  72 => 9,  63 => 5,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("{% extends 'base.html.twig' %}
 
-{% block title %}Connection{% endblock %}
+{% block title %}Connexion{% endblock %}
 
 {% block body %}
-{% if error %}
+{# {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
+{% endif %} #}
 
-<form action=\"{{ path('login') }}\" method=\"post\">
-    <label for=\"username\">Username:</label>
+<form action=\"{{ path('security_login') }}\" method=\"post\">
+    {# <label for=\"username\">Username:</label>
     <input type=\"text\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" />
 
     <label for=\"password\">Password:</label>
-    <input type=\"password\" id=\"password\" name=\"_password\" />
+    <input type=\"password\" id=\"password\" name=\"_password\" /> #}
+    <div class=\"container\">
+        <div class=\"form-group\">
+            <input placeholder=\"Adresse email ...\" class=\"form-control\" type=\"text\" id=\"username\" required name=\"_username\" />
+        </div>
+        <div class=\"form-group\">
+            <input placeholder=\"Mot de passe ...\" class=\"form-control\" type=\"password\" id=\"password\" required name=\"_password\" />
+        </div>
 
-    {#
-        If you want to control the URL the user
-        is redirected to on success (more details below)
-        <input type=\"hidden\" name=\"_target_path\" value=\"/account\" />
-    #}
+        {#
+            If you want to control the URL the user
+            is redirected to on success (more details below)
+        #}
+            {# <input type=\"hidden\" name=\"_target_path\" value=\"/\" /> #}
+        
+        <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
 
-    <button type=\"submit\">login</button>
+        <div class=\"form-group\">
+            <button type=\"submit\">Se connecter</button>
+        </div>    
+    </div>
 </form>
-{% endblock %}", "security/login.html.twig", "/Users/marie-aude/Desktop/Sauvegarde TMK 311018/templates/security/login.html.twig");
+{% endblock %}", "security/login.html.twig", "/Users/marie-aude/Desktop/TMK/templates/security/login.html.twig");
     }
 }

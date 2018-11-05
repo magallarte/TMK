@@ -62,6 +62,12 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         switch ($pathinfo) {
+            case '/login':
+                // security_login
+                return array('_route' => 'security_login', '_controller' => 'App\\Controller\\SecurityController::templogin');
+                // app_login
+                return array('_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login');
+                break;
             default:
                 $routes = array(
                     '/article' => array(array('_route' => 'article_index', '_controller' => 'App\\Controller\\ArticleController::index'), null, array('GET' => 0), null),
@@ -93,7 +99,8 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     '/school/stop/' => array(array('_route' => 'school_stop_index', '_controller' => 'App\\Controller\\SchoolStopController::index'), null, array('GET' => 0), null),
                     '/school/stop/new' => array(array('_route' => 'school_stop_new', '_controller' => 'App\\Controller\\SchoolStopController::new'), null, array('GET' => 0, 'POST' => 1), null),
                     '/registration' => array(array('_route' => 'security_registration', '_controller' => 'App\\Controller\\SecurityController::registration'), null, null, null),
-                    '/login' => array(array('_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'), null, null, null),
+                    '/connexion' => array(array('_route' => 'connexion', '_controller' => 'App\\Controller\\SecurityController::connexion'), null, null, null),
+                    '/logout' => array(array('_route' => 'security_logout', '_controller' => 'App\\Controller\\SecurityController::logout'), null, null, null),
                     '/workshop/' => array(array('_route' => 'workshop_index', '_controller' => 'App\\Controller\\WorkshopController::index'), null, array('GET' => 0), null),
                     '/workshop/new' => array(array('_route' => 'workshop_new', '_controller' => 'App\\Controller\\WorkshopController::new'), null, array('GET' => 0, 'POST' => 1), null),
                     '/workshop/create' => array(array('_route' => 'workshop_create', '_controller' => 'App\\Controller\\WorkshopController::create'), null, null, null),

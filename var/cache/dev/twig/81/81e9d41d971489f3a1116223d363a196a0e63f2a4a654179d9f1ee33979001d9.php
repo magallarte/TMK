@@ -69,24 +69,22 @@ class __TwigTemplate_7827858d168402b8523edc2f91b63cb09f13ee4b51603e7725025aae0f2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
-        echo "<div class=\"container\">
-    <h1>Créez votre profil</h1>
-
+        echo "    <div class=\"container\">
+        <h1>Créer votre profil ! </h1>
         <form class=\"form-group\" method=\"post\">
-            ";
-        // line 9
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
-        echo "
-            ";
-        // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 10, $this->source); })()), 'widget');
-        echo "
-            ";
-        // line 11
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 11, $this->source); })()), 'form_end');
+        ";
+        // line 8
+        echo twig_include($this->env, $context, "member/_form.html.twig", array("button_label" => "Créer"));
         echo "
         </form>
-    </div>
+        <a href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_show");
+        echo "\">Retour à l'accueil</a>
+        <br>
+        ";
+        // line 13
+        echo "    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -108,7 +106,7 @@ class __TwigTemplate_7827858d168402b8523edc2f91b63cb09f13ee4b51603e7725025aae0f2
 
     public function getDebugInfo()
     {
-        return array (  86 => 11,  82 => 10,  78 => 9,  72 => 5,  63 => 4,  45 => 2,  15 => 1,);
+        return array (  87 => 13,  82 => 10,  77 => 8,  72 => 5,  63 => 4,  45 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -117,16 +115,16 @@ class __TwigTemplate_7827858d168402b8523edc2f91b63cb09f13ee4b51603e7725025aae0f2
 {% block title %}Troc&Mode Kids{% endblock %}
 
 {% block body %}
-<div class=\"container\">
-    <h1>Créez votre profil</h1>
-
+    <div class=\"container\">
+        <h1>Créer votre profil ! </h1>
         <form class=\"form-group\" method=\"post\">
-            {{ form_start(form) }}
-            {{ form_widget(form) }}
-            {{ form_end(form) }}
+        {{ include('member/_form.html.twig', {'button_label': 'Créer'}) }}
         </form>
+        <a href=\"{{ path('home_show') }}\">Retour à l'accueil</a>
+        <br>
+        {# {{ include('member/_delete_form.html.twig') }} #}
     </div>
 {% endblock %}
-", "security/registration.html.twig", "/Users/marie-aude/Desktop/Sauvegarde TMK 311018/templates/security/registration.html.twig");
+", "security/registration.html.twig", "/Users/marie-aude/Desktop/TMK/templates/security/registration.html.twig");
     }
 }
