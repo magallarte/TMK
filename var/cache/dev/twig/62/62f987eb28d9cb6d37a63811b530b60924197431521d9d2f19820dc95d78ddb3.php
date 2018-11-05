@@ -205,54 +205,54 @@ class __TwigTemplate_04856a0b352809803ebae219268e9b9dad619031585b1a5a7e5880ecf5a
     <div id=\"section3\">
         <h3 class=\"orange\">Pourquoi donner et acheter ses vêtements via TROC&Mode Kids ?</h3>
         <div class=\"row justify-content-center\">
-            <div class=\"col-lg-4 my-2 mx-1\">
-              <a href=\"concept.html.twig\" class=\"block block-plain\">
+            <div class=\"col-md-4 my-2 mx-1\">
+              <a href=\"concept.html.twig\" class=\"block block-image block-image1\">
                   <h3 class=\"block-title\">C'est facile !</h3>
                   <p class=\"block-text\">On s'occupe de TOUT (Collecte, Tri, Vente, Recyclage, Préparation de commande, Livraison).</p>
               </a>
             </div>
-            <div class=\"col-lg-6 my-2 mx-1\">
+            <div class=\"col-md-6 my-2 mx-1\">
               <a href=\"";
         // line 136
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("school_stop_index");
-        echo "\" class=\"block block-image block-image1\">
+        echo "\" class=\"block block-plain\">
                   <h3 class=\"block-image-title\">C'est simple !</h3>
                   <p class=\"block-image-text\">On récupère TOUS les vêtements d'enfants (toutes les marques, toutes les tailles, tous les états mais PAS les chaussures !).</p>
               </a>
             </div>
         </div>
         <div class=\"row justify-content-center\">
-            <div class=\"col-lg-6 my-2 mx-1\">
+            <div class=\"col-md-6 my-2 mx-1\">
               <a href=\"";
         // line 144
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("school_stop_index");
-        echo "\" class=\"block block-image block-image2\">
+        echo "\" class=\"block block-plain\">
                   <h3 class=\"block-image-title\">C'est local !</h3>
                   <p class=\"block-image-text\">On récupère vos dons et on vous livre vos commandes sur le parking de l'école de votre enfant.<br> Les vêtements sont triés dans un local à proximité. Cela crée des emplois locaux !</p>
               </a>
             </div>
-            <div class=\"col-lg-4 my-2 mx-1\">
+            <div class=\"col-md-4 my-2 mx-1\">
               <a href=\"";
         // line 150
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_selection");
-        echo "\" class=\"block block-plain\">
+        echo "\" class=\"block block-image block-image2\">
                   <h3 class=\"block-title\">C'est accessible !</h3>
                   <p class=\"block-text\">Les arrivages et les petits prix sont accessibles à tous et à tout moment (en ligne).</p>
               </a>
             </div>
         </div>
         <div class=\"row justify-content-center\">
-            <div class=\"col-lg-4 my-2 mx-1\">
-              <a href=\"concept.html.twig\" class=\"block block-plain\">
+            <div class=\"col-md-4 my-2 mx-1\">
+              <a href=\"concept.html.twig\" class=\"block block-image block-image3\">
                   <h3 class=\"block-title\">C'est valorisant !</h3>
                   <p class=\"block-text\">Grâce aux bénévoles qui réparent et customisent, les vêtements abîmés ont une deuxième vie.</p>
               </a>
             </div>
-            <div class=\"col-lg-6 my-2 mx-1\">
+            <div class=\"col-md-6 my-2 mx-1\">
               <a href=\"";
         // line 164
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("workshop_index");
-        echo "\" class=\"block block-image block-image3\">
+        echo "\" class=\"block block-plain\">
                   <h3 class=\"block-image-title\">C'est utile !</h3>
                   <p class=\"block-image-text\">Cela permet d'éviter le gaspillage vestimentaire et de faire un geste pour la planète ! <br> Cela permet aussi de faire profiter à beaucoup de parents du coin d'un grand choix de vêtements pour leur(s) enfant(s).</p>
               </a>
@@ -435,42 +435,42 @@ class __TwigTemplate_04856a0b352809803ebae219268e9b9dad619031585b1a5a7e5880ecf5a
     <div id=\"section3\">
         <h3 class=\"orange\">Pourquoi donner et acheter ses vêtements via TROC&Mode Kids ?</h3>
         <div class=\"row justify-content-center\">
-            <div class=\"col-lg-4 my-2 mx-1\">
-              <a href=\"concept.html.twig\" class=\"block block-plain\">
+            <div class=\"col-md-4 my-2 mx-1\">
+              <a href=\"concept.html.twig\" class=\"block block-image block-image1\">
                   <h3 class=\"block-title\">C'est facile !</h3>
                   <p class=\"block-text\">On s'occupe de TOUT (Collecte, Tri, Vente, Recyclage, Préparation de commande, Livraison).</p>
               </a>
             </div>
-            <div class=\"col-lg-6 my-2 mx-1\">
-              <a href=\"{{ path('school_stop_index') }}\" class=\"block block-image block-image1\">
+            <div class=\"col-md-6 my-2 mx-1\">
+              <a href=\"{{ path('school_stop_index') }}\" class=\"block block-plain\">
                   <h3 class=\"block-image-title\">C'est simple !</h3>
                   <p class=\"block-image-text\">On récupère TOUS les vêtements d'enfants (toutes les marques, toutes les tailles, tous les états mais PAS les chaussures !).</p>
               </a>
             </div>
         </div>
         <div class=\"row justify-content-center\">
-            <div class=\"col-lg-6 my-2 mx-1\">
-              <a href=\"{{ path('school_stop_index') }}\" class=\"block block-image block-image2\">
+            <div class=\"col-md-6 my-2 mx-1\">
+              <a href=\"{{ path('school_stop_index') }}\" class=\"block block-plain\">
                   <h3 class=\"block-image-title\">C'est local !</h3>
                   <p class=\"block-image-text\">On récupère vos dons et on vous livre vos commandes sur le parking de l'école de votre enfant.<br> Les vêtements sont triés dans un local à proximité. Cela crée des emplois locaux !</p>
               </a>
             </div>
-            <div class=\"col-lg-4 my-2 mx-1\">
-              <a href=\"{{ path('article_selection') }}\" class=\"block block-plain\">
+            <div class=\"col-md-4 my-2 mx-1\">
+              <a href=\"{{ path('article_selection') }}\" class=\"block block-image block-image2\">
                   <h3 class=\"block-title\">C'est accessible !</h3>
                   <p class=\"block-text\">Les arrivages et les petits prix sont accessibles à tous et à tout moment (en ligne).</p>
               </a>
             </div>
         </div>
         <div class=\"row justify-content-center\">
-            <div class=\"col-lg-4 my-2 mx-1\">
-              <a href=\"concept.html.twig\" class=\"block block-plain\">
+            <div class=\"col-md-4 my-2 mx-1\">
+              <a href=\"concept.html.twig\" class=\"block block-image block-image3\">
                   <h3 class=\"block-title\">C'est valorisant !</h3>
                   <p class=\"block-text\">Grâce aux bénévoles qui réparent et customisent, les vêtements abîmés ont une deuxième vie.</p>
               </a>
             </div>
-            <div class=\"col-lg-6 my-2 mx-1\">
-              <a href=\"{{ path('workshop_index') }}\" class=\"block block-image block-image3\">
+            <div class=\"col-md-6 my-2 mx-1\">
+              <a href=\"{{ path('workshop_index') }}\" class=\"block block-plain\">
                   <h3 class=\"block-image-title\">C'est utile !</h3>
                   <p class=\"block-image-text\">Cela permet d'éviter le gaspillage vestimentaire et de faire un geste pour la planète ! <br> Cela permet aussi de faire profiter à beaucoup de parents du coin d'un grand choix de vêtements pour leur(s) enfant(s).</p>
               </a>
@@ -496,6 +496,6 @@ class __TwigTemplate_04856a0b352809803ebae219268e9b9dad619031585b1a5a7e5880ecf5a
 
   </div>
 
-{% endblock %}", "home.html.twig", "/Users/marie-aude/Desktop/Sauvegarde TMK 311018/templates/home.html.twig");
+{% endblock %}", "home.html.twig", "/Users/marie-aude/Desktop/TMK/templates/home.html.twig");
     }
 }
