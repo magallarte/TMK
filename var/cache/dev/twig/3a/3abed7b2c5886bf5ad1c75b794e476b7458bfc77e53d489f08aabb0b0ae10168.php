@@ -72,9 +72,11 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         // line 6
         echo "
 <!-- Section 1 :  Photo + accroche -->
-<div id=\"section1\" class=\"jetrouve-image section1-image\">
-    <h3 class=\"blue section1-title\">Acheter des vêtements de seconde main, c’est important ...</h3>
-    <a href=\"#section2\"><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
+<div id=\"section1\" class=\"jetrouve-image page-image\">
+    <a href=\"#section2\" class=\"page-title blue\">
+    <h3>Acheter des vêtements de seconde main, c’est important ...</h3>
+    <img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\">
+    </a>
 </div>
 <br>
         
@@ -83,7 +85,8 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
 
 
         <!-- Section 2 :  4 arguments -->
-        <div id=\"section2\">
+        <span class=\"anchor\" id=\"section2\"></span>
+        <div class=\"page-section\">
             <div class=\"row justify-content-center\">
                 <div class=\"col-lg-5 m-3\">
                         <img src=\"http://127.0.0.1:8000/images/Icone_RECYCLAGE_133x74.png\" class=\"mb-2\">
@@ -104,7 +107,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                 </div>
                 <div class=\"col-lg-5 m-3\">
                 <img src=\"http://127.0.0.1:8000/images/Icone_ECRANS_133x74.png\" class=\"mb-2\">
-                        <h3 class=\"orange mb-2\">Pour me simplifier la vie ...</h3>
+                        <h3 class=\"orange mb-2\">Pour se simplifier la vie ...</h3>
                         <p>Vous pouvez accéder 24H/24H à la sélection TROC & Mode Kids sur votre ordinateur, tablette ou smartphone. Choisissez ce qu’il vous plaît, on vous prépare ensuite un sac que l’on vous remettra sur à l’endroit et date que vous aurez choisis.</p>
                 </div>
             </div>
@@ -119,7 +122,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
             <div class=\"row mb-4 mx-1\">
                 <div class=\"col-md-6 button my-3\">
                     <a href=\"";
-        // line 54
+        // line 57
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("member_new");
         echo "\">
                         <h3>J’ai pas encore acheté.</h3>
@@ -129,7 +132,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                 </div>
                 <div class=\"col-md-6 button my-3\">
                     <a href=\"";
-        // line 61
+        // line 64
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("member_setSession");
         echo "\">
                         <h3>J’ai déjà acheté.</h3>
@@ -141,42 +144,42 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         </div>
 
         <!-- Section 4 : Catalogue -->
-        <div class=\"row\">
+        <div class=\"row mb-3\">
             <div class=\"col-md-3\">
                 ";
-        // line 73
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 73, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
-            // line 74
+        // line 76
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 76, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
+            // line 77
             echo "                    <h3>Préselection</h3>
                     <form action=\"/article/selection\" method=\"post\" class=\"form-group\">
                     <select name=\"preselectionKid\" id=\"preselectionKid\" class=\"form-control dropdown\">
                         ";
-            // line 77
+            // line 80
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 77, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "memberKidList", array()));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 80, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "memberKidList", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["kid"]) {
-                // line 78
+                // line 81
                 echo "                            ";
                 if ((twig_get_attribute($this->env, $this->source, $context["kid"], "kidAge", array()) > 12)) {
-                    // line 79
+                    // line 82
                     echo "                            ";
                     $context["age"] = (twig_get_attribute($this->env, $this->source, $context["kid"], "kidAge", array()) / 12);
-                    // line 80
+                    // line 83
                     echo "                            <option value=\"";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["kid"], "id", array()), "html", null, true);
                     echo "\">Sélection pour ";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["kid"], "kidSurname", array()), "html", null, true);
                     echo " - ";
-                    echo twig_escape_filter($this->env, twig_round((isset($context["age"]) || array_key_exists("age", $context) ? $context["age"] : (function () { throw new Twig_Error_Runtime('Variable "age" does not exist.', 80, $this->source); })())), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_round((isset($context["age"]) || array_key_exists("age", $context) ? $context["age"] : (function () { throw new Twig_Error_Runtime('Variable "age" does not exist.', 83, $this->source); })())), "html", null, true);
                     echo " ans - Taille ";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["kid"], "kidSizeCode", array()), "html", null, true);
                     echo "</option>
                             ";
                 } else {
-                    // line 81
+                    // line 84
                     echo " #}
                             <option value=\"";
-                    // line 82
+                    // line 85
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["kid"], "id", array()), "html", null, true);
                     echo "\">Sélection pour ";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["kid"], "kidSurname", array()), "html", null, true);
@@ -187,13 +190,13 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                     echo "</option>
                             ";
                 }
-                // line 84
+                // line 87
                 echo "                        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['kid'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 85
+            // line 88
             echo "                    </select>
                     <br>
                     <input type=\"submit\" value=\"VOIR\">
@@ -201,18 +204,18 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                     </form>
                 ";
         }
-        // line 91
+        // line 94
         echo "                <h2>Votre sélection</h2>
                 <form action=\"/article/selection\" method=\"post\" class=\"form-group\">
                     ";
-        // line 94
+        // line 97
         echo "                    <select name=\"selectionGender[]\" id=\"selectionGender\" class=\"form-control mdb-select selectpicker\" multiple data-live-search=\"true\" title=\"Genre\" data-style=\"btn-select\">
                         ";
-        // line 95
+        // line 98
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["genders"]) || array_key_exists("genders", $context) ? $context["genders"] : (function () { throw new Twig_Error_Runtime('Variable "genders" does not exist.', 95, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["genders"]) || array_key_exists("genders", $context) ? $context["genders"] : (function () { throw new Twig_Error_Runtime('Variable "genders" does not exist.', 98, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["gender"]) {
-            // line 96
+            // line 99
             echo "                        <option value=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gender"], "id", array()), "html", null, true);
             echo "\">";
@@ -223,18 +226,18 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['gender'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 98
+        // line 101
         echo "                    </select>
                     <br>
                     ";
-        // line 101
+        // line 104
         echo "                    <select name=\"selectionSize[]\" id=\"selectionSize\" multiple=\"true\" expanded=\"false\" class=\"form-control mdb-select selectpicker\" multiple data-live-search=\"true\" title=\"Taille\" data-style=\"btn-select\">
                         ";
-        // line 102
+        // line 105
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["sizes"]) || array_key_exists("sizes", $context) ? $context["sizes"] : (function () { throw new Twig_Error_Runtime('Variable "sizes" does not exist.', 102, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["sizes"]) || array_key_exists("sizes", $context) ? $context["sizes"] : (function () { throw new Twig_Error_Runtime('Variable "sizes" does not exist.', 105, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["size"]) {
-            // line 103
+            // line 106
             echo "                        <option value=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["size"], "id", array()), "html", null, true);
             echo "\">";
@@ -245,18 +248,18 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['size'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 105
+        // line 108
         echo "                    </select>
                     <br>
                     ";
-        // line 108
+        // line 111
         echo "                    <select name=\"selectionType[]\" id=\"selectionType\" multiple=\"multiple\" class=\"form-control mdb-select selectpicker\" multiple data-live-search=\"true\" title=\"Type\" data-style=\"btn-select\">
                         ";
-        // line 109
+        // line 112
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["types"]) || array_key_exists("types", $context) ? $context["types"] : (function () { throw new Twig_Error_Runtime('Variable "types" does not exist.', 109, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["types"]) || array_key_exists("types", $context) ? $context["types"] : (function () { throw new Twig_Error_Runtime('Variable "types" does not exist.', 112, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["type"]) {
-            // line 110
+            // line 113
             echo "                        <option value=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["type"], "id", array()), "html", null, true);
             echo "\">";
@@ -267,18 +270,18 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['type'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 112
+        // line 115
         echo "                    </select>
                     <br>
                     ";
-        // line 115
+        // line 118
         echo "                    <select name=\"selectionSeason[]\" id=\"selectionSeason\" multiple=\"multiple\" class=\"form-control mdb-select selectpicker\" multiple data-live-search=\"true\" title=\"Saison\" data-style=\"btn-select\">
                         ";
-        // line 116
+        // line 119
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["seasons"]) || array_key_exists("seasons", $context) ? $context["seasons"] : (function () { throw new Twig_Error_Runtime('Variable "seasons" does not exist.', 116, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["seasons"]) || array_key_exists("seasons", $context) ? $context["seasons"] : (function () { throw new Twig_Error_Runtime('Variable "seasons" does not exist.', 119, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["season"]) {
-            // line 117
+            // line 120
             echo "                        <option value=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["season"], "id", array()), "html", null, true);
             echo "\">";
@@ -289,18 +292,18 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['season'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 119
+        // line 122
         echo "                    </select>
                     <br>
                     ";
-        // line 122
+        // line 125
         echo "                    <select name=\"selectionColor[]\" id=\"selectionColor\" multiple=\"multiple\" class=\"form-control mdb-select selectpicker\" multiple data-live-search=\"true\" title=\"Couleur\" data-style=\"btn-select\">
                         ";
-        // line 123
+        // line 126
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 123, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["colors"]) || array_key_exists("colors", $context) ? $context["colors"] : (function () { throw new Twig_Error_Runtime('Variable "colors" does not exist.', 126, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["color"]) {
-            // line 124
+            // line 127
             echo "                        <option value=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["color"], "id", array()), "html", null, true);
             echo "\">";
@@ -311,18 +314,18 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['color'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 126
+        // line 129
         echo "                    </select>
                     <br>
                     ";
-        // line 129
+        // line 132
         echo "                    <select name=\"selectionBrand[]\" id=\"selectionBrand\" multiple=\"multiple\" class=\"form-control mdb-select selectpicker\" multiple data-live-search=\"true\" title=\"Marque\" data-style=\"btn-select\">
                         ";
-        // line 130
+        // line 133
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["brands"]) || array_key_exists("brands", $context) ? $context["brands"] : (function () { throw new Twig_Error_Runtime('Variable "brands" does not exist.', 130, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["brands"]) || array_key_exists("brands", $context) ? $context["brands"] : (function () { throw new Twig_Error_Runtime('Variable "brands" does not exist.', 133, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["brand"]) {
-            // line 131
+            // line 134
             echo "                        <option value=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["brand"], "id", array()), "html", null, true);
             echo "\">";
@@ -333,18 +336,18 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['brand'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 133
+        // line 136
         echo "                    </select>
                     <br>
                     ";
-        // line 136
+        // line 139
         echo "                    <select name=\"selectionWearStatus[]\" id=\"selectionWearStatus\" multiple=\"multiple\" class=\"form-control mdb-select selectpicker\" multiple data-live-search=\"true\" title=\"Etat d'usure\" data-style=\"btn-select\">
                         ";
-        // line 137
+        // line 140
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["wearStatuss"]) || array_key_exists("wearStatuss", $context) ? $context["wearStatuss"] : (function () { throw new Twig_Error_Runtime('Variable "wearStatuss" does not exist.', 137, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["wearStatuss"]) || array_key_exists("wearStatuss", $context) ? $context["wearStatuss"] : (function () { throw new Twig_Error_Runtime('Variable "wearStatuss" does not exist.', 140, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["wearStatus"]) {
-            // line 138
+            // line 141
             echo "                        <option value=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["wearStatus"], "id", array()), "html", null, true);
             echo "\">";
@@ -355,13 +358,13 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['wearStatus'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 140
+        // line 143
         echo "                    </select>
                     <div class=\"row justify-content-center d-flex align-items-center\">
                         <input class=\"col-md-12 button h3\" type=\"submit\" value=\"Filtrer\">
                     </div>
                     <a href=\"";
-        // line 144
+        // line 147
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_selection");
         echo "\">Revoir tout le catalogue </a>
                 </form>
@@ -372,67 +375,72 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                 <h3>Articles prochainement disponibles ...</h3>
                     <div class=\"row\">
                         ";
-        // line 152
+        // line 155
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new Twig_Error_Runtime('Variable "articles" does not exist.', 152, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new Twig_Error_Runtime('Variable "articles" does not exist.', 155, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 153
-            echo "                        <div class=\"col-lg-3 col-md-4 col-sm-6 portfolio-item\">
-                            <div class=\"pola\">
-                                ";
             // line 156
-            echo "                                <a href=\"";
+            echo "                        <div class=\"col-lg-3 col-md-4 col-sm-6\">
+                                <a href=\"";
+            // line 157
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_show", array("id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", array()))), "html", null, true);
-            echo "\"><img class=\"pola-picture\" src=\"";
+            echo "\">
+                                <div class=\"pola mb-3\">
+                                    <div class=\"pola-body\">
+                                        <div class=\"pb-3\">
+                                            <img class=\"pola-picture\" src=\"";
+            // line 161
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/pictures/" . twig_get_attribute($this->env, $this->source, $context["article"], "articlePicture1", array()))), "html", null, true);
             echo "\" alt=\"\">
-                                    <div class=\"pola-body\">
-                                        <div class=\"row justify-content-center d-flex align-items-center\">
-                                            <div class=\"col-md-12 px-0\">
-                                                <h4 >";
-            // line 160
+                                        </div>
+                                        <div class=\"pola-text\">
+                                            <div class=\"row justify-content-center d-flex align-items-center\">
+                                                <div class=\"col-md-12 px-0\">
+                                                    <h4 >";
+            // line 166
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "articleType", array()), "TypeName", array()), "html", null, true);
             echo " ";
             echo twig_escape_filter($this->env, twig_upper_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "articleBrand", array()), "BrandName", array())), "html", null, true);
             echo "</h4>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class=\"row\">
-                                            <div class=\"col-md-7 px-0\">
-                                                <h4>";
-            // line 165
+                                            <div class=\"row\">
+                                                <div class=\"col-md-7 px-0 py-0 agegender\">
+                                                    <h4>";
+            // line 171
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "articleGender", array()), "GenderName", array()), "html", null, true);
-            echo " ";
+            echo "<br>";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "articleSize", array()), "SizeName", array()), "html", null, true);
             echo "</h4>
-                                            </div>
-                                            <div class=\"col-md-5\">
-                                                <div class=\"row px-1 align-items-center\">
-                                                <h4 class=\"pt-2 mr-1\">";
-            // line 169
+                                                </div>
+                                                <div class=\"col-md-5\">
+                                                    <div class=\"row px-1 align-items-center\">
+                                                    <h4 class=\"pt-2 mr-1\">";
+            // line 175
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "articlebuttonValue", array()), "html", null, true);
             echo "</h4>
-                                                <img src=\"http://127.0.0.1:8000/images/Icone_BOUTON_BLEU_45X45.png\" alt=\"Boutons\" width=\"50%\" height=\"50%\">
+                                                    <img class=\"pola-buttonmoney\" src=\"http://127.0.0.1:8000/images/Icone_BOUTON_BLEU_45X45.png\" alt=\"Boutons\">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 </a>
-                            </div>
                         </div>
                         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 179
+            // line 186
             echo "                        <p>Nous n'avons plus d'articles dans vos critères actuellement. Réessayez prochainement !</p>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 181
+        // line 188
         echo "                    </div>
             </div>
         </div>
@@ -446,7 +454,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
 
     }
 
-    // line 187
+    // line 194
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -455,10 +463,10 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 188
+        // line 195
         echo "
 ";
-        // line 190
+        // line 197
         echo "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css\" />
 <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js\"></script>
@@ -495,7 +503,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
 
     public function getDebugInfo()
     {
-        return array (  462 => 190,  459 => 188,  450 => 187,  436 => 181,  429 => 179,  414 => 169,  405 => 165,  395 => 160,  385 => 156,  381 => 153,  376 => 152,  365 => 144,  359 => 140,  348 => 138,  344 => 137,  341 => 136,  337 => 133,  326 => 131,  322 => 130,  319 => 129,  315 => 126,  304 => 124,  300 => 123,  297 => 122,  293 => 119,  282 => 117,  278 => 116,  275 => 115,  271 => 112,  260 => 110,  256 => 109,  253 => 108,  249 => 105,  238 => 103,  234 => 102,  231 => 101,  227 => 98,  216 => 96,  212 => 95,  209 => 94,  205 => 91,  197 => 85,  191 => 84,  180 => 82,  177 => 81,  165 => 80,  162 => 79,  159 => 78,  155 => 77,  150 => 74,  148 => 73,  133 => 61,  123 => 54,  73 => 6,  64 => 5,  46 => 3,  15 => 1,);
+        return array (  470 => 197,  467 => 195,  458 => 194,  444 => 188,  437 => 186,  421 => 175,  412 => 171,  402 => 166,  394 => 161,  387 => 157,  384 => 156,  379 => 155,  368 => 147,  362 => 143,  351 => 141,  347 => 140,  344 => 139,  340 => 136,  329 => 134,  325 => 133,  322 => 132,  318 => 129,  307 => 127,  303 => 126,  300 => 125,  296 => 122,  285 => 120,  281 => 119,  278 => 118,  274 => 115,  263 => 113,  259 => 112,  256 => 111,  252 => 108,  241 => 106,  237 => 105,  234 => 104,  230 => 101,  219 => 99,  215 => 98,  212 => 97,  208 => 94,  200 => 88,  194 => 87,  183 => 85,  180 => 84,  168 => 83,  165 => 82,  162 => 81,  158 => 80,  153 => 77,  151 => 76,  136 => 64,  126 => 57,  73 => 6,  64 => 5,  46 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -507,9 +515,11 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
 {% block body %}
 
 <!-- Section 1 :  Photo + accroche -->
-<div id=\"section1\" class=\"jetrouve-image section1-image\">
-    <h3 class=\"blue section1-title\">Acheter des vêtements de seconde main, c’est important ...</h3>
-    <a href=\"#section2\"><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
+<div id=\"section1\" class=\"jetrouve-image page-image\">
+    <a href=\"#section2\" class=\"page-title blue\">
+    <h3>Acheter des vêtements de seconde main, c’est important ...</h3>
+    <img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\">
+    </a>
 </div>
 <br>
         
@@ -518,7 +528,8 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
 
 
         <!-- Section 2 :  4 arguments -->
-        <div id=\"section2\">
+        <span class=\"anchor\" id=\"section2\"></span>
+        <div class=\"page-section\">
             <div class=\"row justify-content-center\">
                 <div class=\"col-lg-5 m-3\">
                         <img src=\"http://127.0.0.1:8000/images/Icone_RECYCLAGE_133x74.png\" class=\"mb-2\">
@@ -539,7 +550,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                 </div>
                 <div class=\"col-lg-5 m-3\">
                 <img src=\"http://127.0.0.1:8000/images/Icone_ECRANS_133x74.png\" class=\"mb-2\">
-                        <h3 class=\"orange mb-2\">Pour me simplifier la vie ...</h3>
+                        <h3 class=\"orange mb-2\">Pour se simplifier la vie ...</h3>
                         <p>Vous pouvez accéder 24H/24H à la sélection TROC & Mode Kids sur votre ordinateur, tablette ou smartphone. Choisissez ce qu’il vous plaît, on vous prépare ensuite un sac que l’on vous remettra sur à l’endroit et date que vous aurez choisis.</p>
                 </div>
             </div>
@@ -570,7 +581,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
         </div>
 
         <!-- Section 4 : Catalogue -->
-        <div class=\"row\">
+        <div class=\"row mb-3\">
             <div class=\"col-md-3\">
                 {% if app.session.get('user') %}
                     <h3>Préselection</h3>
@@ -652,30 +663,34 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                 <h3>Articles prochainement disponibles ...</h3>
                     <div class=\"row\">
                         {% for article in articles %}
-                        <div class=\"col-lg-3 col-md-4 col-sm-6 portfolio-item\">
-                            <div class=\"pola\">
-                                {# <a title=\"{{ article.articleType.TypeName }} - {{ article.articleGender.GenderName }} - {{ article.articleSize.SizeName }}\" href=\"{{ path('article_show', {'id': article.id}) }}\"><img src=\"{{ asset('uploads/pictures/' ~ article.articlePicture1)}}\" alt=\"\"> #}
-                                <a href=\"{{ path('article_show', {'id': article.id}) }}\"><img class=\"pola-picture\" src=\"{{ asset('uploads/pictures/' ~ article.articlePicture1)}}\" alt=\"\">
+                        <div class=\"col-lg-3 col-md-4 col-sm-6\">
+                                <a href=\"{{ path('article_show', {'id': article.id}) }}\">
+                                <div class=\"pola mb-3\">
                                     <div class=\"pola-body\">
-                                        <div class=\"row justify-content-center d-flex align-items-center\">
-                                            <div class=\"col-md-12 px-0\">
-                                                <h4 >{{ article.articleType.TypeName }} {{ article.articleBrand.BrandName |upper }}</h4>
-                                            </div>
+                                        <div class=\"pb-3\">
+                                            <img class=\"pola-picture\" src=\"{{ asset('uploads/pictures/' ~ article.articlePicture1)}}\" alt=\"\">
                                         </div>
-                                        <div class=\"row\">
-                                            <div class=\"col-md-7 px-0\">
-                                                <h4>{{ article.articleGender.GenderName }} {{ article.articleSize.SizeName }}</h4>
+                                        <div class=\"pola-text\">
+                                            <div class=\"row justify-content-center d-flex align-items-center\">
+                                                <div class=\"col-md-12 px-0\">
+                                                    <h4 >{{ article.articleType.TypeName }} {{ article.articleBrand.BrandName |upper }}</h4>
+                                                </div>
                                             </div>
-                                            <div class=\"col-md-5\">
-                                                <div class=\"row px-1 align-items-center\">
-                                                <h4 class=\"pt-2 mr-1\">{{ article.articlebuttonValue }}</h4>
-                                                <img src=\"http://127.0.0.1:8000/images/Icone_BOUTON_BLEU_45X45.png\" alt=\"Boutons\" width=\"50%\" height=\"50%\">
+                                            <div class=\"row\">
+                                                <div class=\"col-md-7 px-0 py-0 agegender\">
+                                                    <h4>{{ article.articleGender.GenderName }}<br>{{ article.articleSize.SizeName }}</h4>
+                                                </div>
+                                                <div class=\"col-md-5\">
+                                                    <div class=\"row px-1 align-items-center\">
+                                                    <h4 class=\"pt-2 mr-1\">{{ article.articlebuttonValue }}</h4>
+                                                    <img class=\"pola-buttonmoney\" src=\"http://127.0.0.1:8000/images/Icone_BOUTON_BLEU_45X45.png\" alt=\"Boutons\">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 </a>
-                            </div>
                         </div>
                         {% else %}
                         <p>Nous n'avons plus d'articles dans vos critères actuellement. Réessayez prochainement !</p>
@@ -705,6 +720,6 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
 </script>
             
 {% endblock %}
-", "article/selection.html.twig", "/Users/marie-aude/Desktop/Sauvegarde TMK 311018/templates/article/selection.html.twig");
+", "article/selection.html.twig", "/Users/marie-aude/Desktop/TMK/templates/article/selection.html.twig");
     }
 }

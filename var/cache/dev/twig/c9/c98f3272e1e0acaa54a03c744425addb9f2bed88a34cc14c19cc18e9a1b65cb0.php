@@ -71,16 +71,19 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
         // line 6
         echo "
 <!-- Section 1 :  Photo + accroche -->
-<div id=\"section1\" class=\"jeparticipe-image section1-image\">
-    <h3 class=\"blue section1-title\">Découvrer ou partager une passion ...</h3>
-    <a href=\"#section2\"><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
+<div id=\"section1\" class=\"jeparticipe-image page-image\">
+    <a href=\"#section2\" class=\"page-title blue\">
+    <h3>Découvrez ou partagez une passion ...</h3>
+    <img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\">
+    </a>
 </div>
 <br>
 
 <div class=\"container\">
 
     <!-- Section 2 :  2 arguments -->
-        <div id=\"section2\">
+    <span class=\"anchor\" id=\"section2\"></span>
+        <div class=\"page-section\">
             <div class=\"row justify-content-center\">
                 <div class=\"col-lg-5 m-3\">
                     <img src=\"http://127.0.0.1:8000/images/Icone_CAFE_134x74.png\" class=\"mb-2\">
@@ -99,7 +102,9 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
             <br>
         </div>
     
-      <!-- Section 3 : Où et quand -->
+    <!-- Section 3 : Où et quand -->
+    <span class=\"anchor\" id=\"section3\"></span>
+    <div class=\"page-section\">
       <div class=\"row justify-content-center\">
         <div class=\"col-lg-5 my-3 mx-4\">
           <div class=\"row justify-content-center d-flex align-items-center\">
@@ -123,15 +128,16 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
         </div>
       </div>
       <br>
+    </div>
 
-
+ <!-- Section 4 : Liste des ateliers -->
     <br>
     <h2>Ateliers \"Couture\" à venir </h2>
-    <table class=\"table\">
+    <table class=\"table row\">
         <thead>
             <tr>
                 ";
-        // line 68
+        // line 74
         echo "                <th>Date / Heure</th>
                 <th>Thème</th>
                 <th>Prix</th>
@@ -139,90 +145,90 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
                 <th>Image</th>
                 <th>Formateur</th>
                     ";
-        // line 74
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 74, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
-            // line 75
+        // line 80
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 80, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
+            // line 81
             echo "                        ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 75, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 81, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 76
+                // line 82
                 echo "                            ";
                 if ((twig_get_attribute($this->env, $this->source, $context["role"], "id", array()) == "6")) {
-                    // line 77
+                    // line 83
                     echo "                            <th>Personnes inscrites</th>
                             ";
                 }
-                // line 79
+                // line 85
                 echo "                        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 80
+            // line 86
             echo "                    ";
         }
-        // line 81
+        // line 87
         echo "                <th>Inscription</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 85
+        // line 91
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["workshops"]) || array_key_exists("workshops", $context) ? $context["workshops"] : (function () { throw new Twig_Error_Runtime('Variable "workshops" does not exist.', 85, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["workshops"]) || array_key_exists("workshops", $context) ? $context["workshops"] : (function () { throw new Twig_Error_Runtime('Variable "workshops" does not exist.', 91, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["workshop"]) {
-            // line 86
+            // line 92
             echo "            <tr>
                 ";
-            // line 88
+            // line 94
             echo "                <td>";
             echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, $context["workshop"], "workshopDate", array())) ? (twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["workshop"], "workshopDate", array()), "Y-m-d H:i")) : ("")), "html", null, true);
             echo "</td>
                 <td>";
-            // line 89
+            // line 95
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["workshop"], "workshopTheme", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 90
+            // line 96
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["workshop"], "workshopFee", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 91
+            // line 97
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["workshop"], "workshopPlace", array()), "html", null, true);
             echo "</td>
                 <td><img src=";
-            // line 92
+            // line 98
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . twig_get_attribute($this->env, $this->source, $context["workshop"], "workshopPicture", array()))), "html", null, true);
             echo " height=\"50px\"/></td>
                  ";
-            // line 94
+            // line 100
             echo "                        </div>
                 ";
-            // line 96
+            // line 102
             echo "                <td>";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["workshop"], "workshopTrainer", array()), "MemberSurname", array()), "html", null, true);
             echo " ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["workshop"], "workshopTrainer", array()), "MemberName", array()), "html", null, true);
             echo "</td>
                 ";
-            // line 97
-            if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 97, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
-                // line 98
+            // line 103
+            if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 103, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
+                // line 104
                 echo "                    ";
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 98, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 104, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
                 foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                    // line 99
+                    // line 105
                     echo "                        ";
                     if ((twig_get_attribute($this->env, $this->source, $context["role"], "id", array()) == "6")) {
-                        // line 100
+                        // line 106
                         echo "                            ";
                         $context['_parent'] = $context;
                         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["workshop"], "workshopTraineesList", array()));
                         foreach ($context['_seq'] as $context["_key"] => $context["trainee"]) {
-                            // line 101
+                            // line 107
                             echo "                            <td>";
                             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trainee"], "MemberSurname", array()), "html", null, true);
                             echo " ";
@@ -233,58 +239,58 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
                         $_parent = $context['_parent'];
                         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['trainee'], $context['_parent'], $context['loop']);
                         $context = array_intersect_key($context, $_parent) + $_parent;
-                        // line 103
+                        // line 109
                         echo "                        ";
                     }
-                    // line 104
+                    // line 110
                     echo "                    ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 105
+                // line 111
                 echo "                ";
             }
-            // line 106
+            // line 112
             echo "                <td>
                     <a href=\"";
-            // line 107
+            // line 113
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("workshop_book", array("id" => twig_get_attribute($this->env, $this->source, $context["workshop"], "id", array()))), "html", null, true);
             echo "\">S'inscrire</a>
                 ";
-            // line 108
-            if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 108, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
-                // line 109
+            // line 114
+            if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 114, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
+                // line 115
                 echo "                    ";
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 109, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 115, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
                 foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                    // line 110
+                    // line 116
                     echo "                        ";
                     if ((twig_get_attribute($this->env, $this->source, $context["role"], "id", array()) == "6")) {
-                        // line 111
+                        // line 117
                         echo "                            <a href=\"";
                         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("workshop_edit", array("id" => twig_get_attribute($this->env, $this->source, $context["workshop"], "id", array()))), "html", null, true);
                         echo "\">Modifier la fiche</a>
                         ";
                     }
-                    // line 113
+                    // line 119
                     echo "                    ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 114
+                // line 120
                 echo "                ";
             }
-            // line 115
+            // line 121
             echo "                </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 118
+            // line 124
             echo "            <tr>
                 <td colspan=\"7\">Aucun atelier trouvé</td>
             </tr>
@@ -293,37 +299,37 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['workshop'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 122
+        // line 128
         echo "        </tbody>
     </table>
 
     ";
-        // line 125
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 125, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
-            // line 126
+        // line 131
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 131, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
+            // line 132
             echo "        ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 126, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 132, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 127
+                // line 133
                 echo "            ";
                 if ((twig_get_attribute($this->env, $this->source, $context["role"], "id", array()) == "6")) {
-                    // line 128
+                    // line 134
                     echo "                <a href=\"";
                     echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("workshop_new");
                     echo "\">Créer un nouvel atelier</a>
             ";
                 }
-                // line 130
+                // line 136
                 echo "        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 131
+            // line 137
             echo "    ";
         }
-        // line 132
+        // line 138
         echo "    
 </div> 
 ";
@@ -347,7 +353,7 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
 
     public function getDebugInfo()
     {
-        return array (  327 => 132,  324 => 131,  318 => 130,  312 => 128,  309 => 127,  304 => 126,  302 => 125,  297 => 122,  288 => 118,  281 => 115,  278 => 114,  272 => 113,  266 => 111,  263 => 110,  258 => 109,  256 => 108,  252 => 107,  249 => 106,  246 => 105,  240 => 104,  237 => 103,  226 => 101,  221 => 100,  218 => 99,  213 => 98,  211 => 97,  204 => 96,  201 => 94,  197 => 92,  193 => 91,  189 => 90,  185 => 89,  180 => 88,  177 => 86,  172 => 85,  166 => 81,  163 => 80,  157 => 79,  153 => 77,  150 => 76,  145 => 75,  143 => 74,  135 => 68,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
+        return array (  333 => 138,  330 => 137,  324 => 136,  318 => 134,  315 => 133,  310 => 132,  308 => 131,  303 => 128,  294 => 124,  287 => 121,  284 => 120,  278 => 119,  272 => 117,  269 => 116,  264 => 115,  262 => 114,  258 => 113,  255 => 112,  252 => 111,  246 => 110,  243 => 109,  232 => 107,  227 => 106,  224 => 105,  219 => 104,  217 => 103,  210 => 102,  207 => 100,  203 => 98,  199 => 97,  195 => 96,  191 => 95,  186 => 94,  183 => 92,  178 => 91,  172 => 87,  169 => 86,  163 => 85,  159 => 83,  156 => 82,  151 => 81,  149 => 80,  141 => 74,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -359,16 +365,19 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
 {% block body %}
 
 <!-- Section 1 :  Photo + accroche -->
-<div id=\"section1\" class=\"jeparticipe-image section1-image\">
-    <h3 class=\"blue section1-title\">Découvrer ou partager une passion ...</h3>
-    <a href=\"#section2\"><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
+<div id=\"section1\" class=\"jeparticipe-image page-image\">
+    <a href=\"#section2\" class=\"page-title blue\">
+    <h3>Découvrez ou partagez une passion ...</h3>
+    <img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\">
+    </a>
 </div>
 <br>
 
 <div class=\"container\">
 
     <!-- Section 2 :  2 arguments -->
-        <div id=\"section2\">
+    <span class=\"anchor\" id=\"section2\"></span>
+        <div class=\"page-section\">
             <div class=\"row justify-content-center\">
                 <div class=\"col-lg-5 m-3\">
                     <img src=\"http://127.0.0.1:8000/images/Icone_CAFE_134x74.png\" class=\"mb-2\">
@@ -387,7 +396,9 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
             <br>
         </div>
     
-      <!-- Section 3 : Où et quand -->
+    <!-- Section 3 : Où et quand -->
+    <span class=\"anchor\" id=\"section3\"></span>
+    <div class=\"page-section\">
       <div class=\"row justify-content-center\">
         <div class=\"col-lg-5 my-3 mx-4\">
           <div class=\"row justify-content-center d-flex align-items-center\">
@@ -411,11 +422,12 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
         </div>
       </div>
       <br>
+    </div>
 
-
+ <!-- Section 4 : Liste des ateliers -->
     <br>
     <h2>Ateliers \"Couture\" à venir </h2>
-    <table class=\"table\">
+    <table class=\"table row\">
         <thead>
             <tr>
                 {# <th>Id</th> #}
@@ -485,6 +497,6 @@ class __TwigTemplate_ff83282357e2ea6b182ad0235b788bcea965994a53add13c14d89d41984
     {% endif %}
     
 </div> 
-{% endblock %}", "workshop/index.html.twig", "/Users/marie-aude/Desktop/Sauvegarde TMK 311018/templates/workshop/index.html.twig");
+{% endblock %}", "workshop/index.html.twig", "/Users/marie-aude/Desktop/TMK/templates/workshop/index.html.twig");
     }
 }

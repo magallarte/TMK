@@ -5,16 +5,19 @@
 {% block body %}
 
 <!-- Section 1 :  Photo + accroche -->
-<div id="section1" class="jeparticipe-image section1-image">
-    <h3 class="blue section1-title">Découvrer ou partager une passion ...</h3>
-    <a href="#section2"><img src="http://127.0.0.1:8000/images/Icone_Chevron.png"></a>
+<div id="section1" class="jeparticipe-image page-image">
+    <a href="#section2" class="page-title blue">
+    <h3>Découvrez ou partagez une passion ...</h3>
+    <img src="http://127.0.0.1:8000/images/Icone_Chevron.png">
+    </a>
 </div>
 <br>
 
 <div class="container">
 
     <!-- Section 2 :  2 arguments -->
-        <div id="section2">
+    <span class="anchor" id="section2"></span>
+        <div class="page-section">
             <div class="row justify-content-center">
                 <div class="col-lg-5 m-3">
                     <img src="http://127.0.0.1:8000/images/Icone_CAFE_134x74.png" class="mb-2">
@@ -33,7 +36,9 @@
             <br>
         </div>
     
-      <!-- Section 3 : Où et quand -->
+    <!-- Section 3 : Où et quand -->
+    <span class="anchor" id="section3"></span>
+    <div class="page-section">
       <div class="row justify-content-center">
         <div class="col-lg-5 my-3 mx-4">
           <div class="row justify-content-center d-flex align-items-center">
@@ -57,11 +62,12 @@
         </div>
       </div>
       <br>
+    </div>
 
-
+ <!-- Section 4 : Liste des ateliers -->
     <br>
     <h2>Ateliers "Couture" à venir </h2>
-    <table class="table">
+    <table class="table row">
         <thead>
             <tr>
                 {# <th>Id</th> #}

@@ -72,75 +72,65 @@ class __TwigTemplate_fe8969b50b35248029a90e5c532e8b3bfcda2f4722bd05770c67b97eba3
         echo "
 <!-- Page Content -->
 
-<!-- Section 1 :  Photo + accroche -->
-        <div id=\"section1\" class=\"concept-image section1-image\">
-            <a href=\"\" class=\"section1-title\">
-                <img src=\"http://127.0.0.1:8000/images/Icone_VIDEO_74x74.png\">
-            </a>
-        </div>
-        <br>
-        <a href=\"#section2\"><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
-        <br>
-
-        
     <div class=\"container\">
-        
-
-        <!-- Section 2 :  9 circle steps -->
-        <div id=\"section2\">
-            <h3 class=\"orange py-2\">Troc&Mode kids est une association dont l’objectif est de promouvoir le recyclage «utile» des vêtements pour enfants.</h3>
-            <div class=\"cercle d-none d-lg-block\"></div>
-            <div class=\"d-lg-none\">
-            <div class=\"justify-content-center\">
-                            <img src=\"http://127.0.0.1:8000/images/Icone_SAC_134x115.png\" class=\"mb-2\">
-                            <h3>#1</h3>
-                            <p >Rassemblez dans un sac de don les vêtements à donner. Tous les vêtements (neufs, en bon état ou abîmés) doivent être lavés. Attention : nous nous récupèrons pas les chaussures !</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_RDV_134x74.png\" class=\"mb-2\">
-                            <h3>#2</h3>
-                            <p>Choisissez sur le site à quelle école et quel jour vous souhaitez remettre votre sac de don.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_CAMION_134x74.png\" class=\"mb-2\">
-                            <h3>#3</h3>
-                            <p>Le véhicule de collecte récupère votre sac.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_DON_240x200.png\" class=\"mb-2\">
-                            <h3>#4</h3>
-                            <p>Les vêtements sont triés.<br> Les vêtements en bon état sont mis en vente sur le site et votre cagnotte sera créditée de «boutons». <br> Les vêtements abîmés sont utilisés comme matière première pour confectionner d’autres vêtements.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_ECRANS_133x74.png\" class=\"mb-2\">
-                            <h3>#5</h3>
-                            <p>Choisissez sur le site les vêtements que vous souhaitez commander.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_ACHAT_240x200.png\" class=\"mb-2\">
-                            <h3>#6</h3>
-                            <p>Vous pouvez payer vos achats , en ligne,en «boutons»  (+1€ par vêtement) ou bien directement en euros.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_RDV_134x74.png\" class=\"mb-2\">
-                            <h3>#7</h3>
-                            <p>Choisissez sur le site à quelle école et quel jour vous souhaitez récupérer votre commande.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_CAMION_134x74.png\" class=\"mb-2\">
-                            <h3>#8</h3>
-                            <p>Le véhicule de livraison vous livre votre commande (2€ par livraison).</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_SAC_134x115.png\" class=\"mb-2\">
-                            <h3>#9</h3>
-                            <p>Récupérez votre commande  dans un sac de livraison. </p>
-            </div>
-        </div>    
-        <div>
-            <a href=\"#section3\" ><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
-            <br>
-            <br>
+<!-- Section 1 :  concept en cercle ou 9 étapes -->
+        <div id=\"section1\">
+        <h3 class=\"orange pb-2\">Troc&Mode kids est une association dont l’objectif est de promouvoir le recyclage «utile» des vêtements pour enfants.</h3>
+            <a href=\"\">
+                <img src=\"http://127.0.0.1:8000/images/Icone_VIDEO_74x74.png\">
+                <p>Découvrez notre concept ...</p>
+            </a>
+            <div class=\"concept-image d-none d-lg-block\"></div>
+                <div class=\"d-lg-none\">
+                    <div class=\"justify-content-center\">
+                        <img src=\"http://127.0.0.1:8000/images/Icone_SAC_134x115.png\" class=\"mb-2\">
+                        <h3>#1</h3>
+                        <p >Rassemblez dans un sac de don les vêtements à donner. Tous les vêtements (neufs, en bon état ou abîmés) doivent être lavés. Attention : nous nous récupèrons pas les chaussures !</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_RDV_134x74.png\" class=\"mb-2\">
+                        <h3>#2</h3>
+                        <p>Choisissez sur le site à quelle école et quel jour vous souhaitez remettre votre sac de don.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_CAMION_134x74.png\" class=\"mb-2\">
+                        <h3>#3</h3>
+                        <p>Le véhicule de collecte récupère votre sac.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_DON_240x200.png\" class=\"mb-2\">
+                        <h3>#4</h3>
+                        <p>Les vêtements sont triés.<br> Les vêtements en bon état sont mis en vente sur le site et votre cagnotte sera créditée de «boutons». <br> Les vêtements abîmés sont utilisés comme matière première pour confectionner d’autres vêtements.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_ECRANS_133x74.png\" class=\"mb-2\">
+                        <h3>#5</h3>
+                        <p>Choisissez sur le site les vêtements que vous souhaitez commander.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_ACHAT_240x200.png\" class=\"mb-2\">
+                        <h3>#6</h3>
+                        <p>Vous pouvez payer vos achats , en ligne,en «boutons»  (+1€ par vêtement) ou bien directement en euros.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_RDV_134x74.png\" class=\"mb-2\">
+                        <h3>#7</h3>
+                        <p>Choisissez sur le site à quelle école et quel jour vous souhaitez récupérer votre commande.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_CAMION_134x74.png\" class=\"mb-2\">
+                        <h3>#8</h3>
+                        <p>Le véhicule de livraison vous livre votre commande (2€ par livraison).</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_SAC_134x115.png\" class=\"mb-2\">
+                        <h3>#9</h3>
+                        <p>Récupérez votre commande  dans un sac de livraison. </p>
+                    </div>
+                <br>
+                <a href=\"#section2\"><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
+                <br>
+    
         </div>
 
-        <!-- Section 3 : Déjà inscrit ou Nouveau ? -->
-        <div id=\"section3\">
-            <div class=\"row mb-4 mx-1\">
+<!-- Section 2 : Déjà inscrit ou Nouveau ? -->
+        <div id=\"section2\">
+            <div class=\"row mb-2 mx-1\">
                 <div class=\"col-md-6 button my-3\">
                     <a href=\"";
-        // line 76
+        // line 66
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("member_new");
         echo "\">
                         <h3>J’ai pas encore donné.</h3>
@@ -150,7 +140,7 @@ class __TwigTemplate_fe8969b50b35248029a90e5c532e8b3bfcda2f4722bd05770c67b97eba3
                 </div>
                 <div class=\"col-md-6 button my-3\">
                     <a href=\"";
-        // line 83
+        // line 73
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("member_setSession");
         echo "\">
                         <h3>J’ai déjà donné.</h3>
@@ -161,24 +151,26 @@ class __TwigTemplate_fe8969b50b35248029a90e5c532e8b3bfcda2f4722bd05770c67b97eba3
             </div>
         </div>
 
-        <!-- Section 4 : Les tournées -->
-        <div id=\"section4\">
-            <div class=\"row mb-4 mx-1\">
+ <!-- Section 3 : Les tournées -->
+        <div id=\"section3\">
+            <div class=\"row mb-2 mx-1\">
                 <div class=\"col-md-6 button my-3\">
                     <a href=\"";
-        // line 96
+        // line 86
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_selection");
         echo "\">
-                        <h3>Je veux profiter des bonnes affaires.</h3>
+                        <h3>Je profite des bonnes affaires.</h3>
+                        <h4></h4>
                         <p>Je découvre la sélection</p>
                     </a>
                 </div>
                 <div class=\"col-md-6 button my-3\">
                     <a href=\"";
-        // line 102
+        // line 93
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("workshop_index");
         echo "\">
-                        <h3>Je veux participer ou me former.</h3>
+                        <h3>Je participe ou je me forme.</h3>
+                        <h4></h4>
                         <p>Je découvre l'atelier \"couture\"</p>
                     </a>
                 </div>
@@ -213,7 +205,7 @@ class __TwigTemplate_fe8969b50b35248029a90e5c532e8b3bfcda2f4722bd05770c67b97eba3
 
     public function getDebugInfo()
     {
-        return array (  179 => 102,  170 => 96,  154 => 83,  144 => 76,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
+        return array (  170 => 93,  160 => 86,  144 => 73,  134 => 66,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -226,72 +218,62 @@ class __TwigTemplate_fe8969b50b35248029a90e5c532e8b3bfcda2f4722bd05770c67b97eba3
 
 <!-- Page Content -->
 
-<!-- Section 1 :  Photo + accroche -->
-        <div id=\"section1\" class=\"concept-image section1-image\">
-            <a href=\"\" class=\"section1-title\">
-                <img src=\"http://127.0.0.1:8000/images/Icone_VIDEO_74x74.png\">
-            </a>
-        </div>
-        <br>
-        <a href=\"#section2\"><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
-        <br>
-
-        
     <div class=\"container\">
-        
-
-        <!-- Section 2 :  9 circle steps -->
-        <div id=\"section2\">
-            <h3 class=\"orange py-2\">Troc&Mode kids est une association dont l’objectif est de promouvoir le recyclage «utile» des vêtements pour enfants.</h3>
-            <div class=\"cercle d-none d-lg-block\"></div>
-            <div class=\"d-lg-none\">
-            <div class=\"justify-content-center\">
-                            <img src=\"http://127.0.0.1:8000/images/Icone_SAC_134x115.png\" class=\"mb-2\">
-                            <h3>#1</h3>
-                            <p >Rassemblez dans un sac de don les vêtements à donner. Tous les vêtements (neufs, en bon état ou abîmés) doivent être lavés. Attention : nous nous récupèrons pas les chaussures !</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_RDV_134x74.png\" class=\"mb-2\">
-                            <h3>#2</h3>
-                            <p>Choisissez sur le site à quelle école et quel jour vous souhaitez remettre votre sac de don.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_CAMION_134x74.png\" class=\"mb-2\">
-                            <h3>#3</h3>
-                            <p>Le véhicule de collecte récupère votre sac.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_DON_240x200.png\" class=\"mb-2\">
-                            <h3>#4</h3>
-                            <p>Les vêtements sont triés.<br> Les vêtements en bon état sont mis en vente sur le site et votre cagnotte sera créditée de «boutons». <br> Les vêtements abîmés sont utilisés comme matière première pour confectionner d’autres vêtements.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_ECRANS_133x74.png\" class=\"mb-2\">
-                            <h3>#5</h3>
-                            <p>Choisissez sur le site les vêtements que vous souhaitez commander.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_ACHAT_240x200.png\" class=\"mb-2\">
-                            <h3>#6</h3>
-                            <p>Vous pouvez payer vos achats , en ligne,en «boutons»  (+1€ par vêtement) ou bien directement en euros.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_RDV_134x74.png\" class=\"mb-2\">
-                            <h3>#7</h3>
-                            <p>Choisissez sur le site à quelle école et quel jour vous souhaitez récupérer votre commande.</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_CAMION_134x74.png\" class=\"mb-2\">
-                            <h3>#8</h3>
-                            <p>Le véhicule de livraison vous livre votre commande (2€ par livraison).</p>
-                            <p class=\"pb-3\"> _____________________________<p>
-                            <img src=\"http://127.0.0.1:8000/images/Icone_SAC_134x115.png\" class=\"mb-2\">
-                            <h3>#9</h3>
-                            <p>Récupérez votre commande  dans un sac de livraison. </p>
-            </div>
-        </div>    
-        <div>
-            <a href=\"#section3\" ><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
-            <br>
-            <br>
+<!-- Section 1 :  concept en cercle ou 9 étapes -->
+        <div id=\"section1\">
+        <h3 class=\"orange pb-2\">Troc&Mode kids est une association dont l’objectif est de promouvoir le recyclage «utile» des vêtements pour enfants.</h3>
+            <a href=\"\">
+                <img src=\"http://127.0.0.1:8000/images/Icone_VIDEO_74x74.png\">
+                <p>Découvrez notre concept ...</p>
+            </a>
+            <div class=\"concept-image d-none d-lg-block\"></div>
+                <div class=\"d-lg-none\">
+                    <div class=\"justify-content-center\">
+                        <img src=\"http://127.0.0.1:8000/images/Icone_SAC_134x115.png\" class=\"mb-2\">
+                        <h3>#1</h3>
+                        <p >Rassemblez dans un sac de don les vêtements à donner. Tous les vêtements (neufs, en bon état ou abîmés) doivent être lavés. Attention : nous nous récupèrons pas les chaussures !</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_RDV_134x74.png\" class=\"mb-2\">
+                        <h3>#2</h3>
+                        <p>Choisissez sur le site à quelle école et quel jour vous souhaitez remettre votre sac de don.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_CAMION_134x74.png\" class=\"mb-2\">
+                        <h3>#3</h3>
+                        <p>Le véhicule de collecte récupère votre sac.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_DON_240x200.png\" class=\"mb-2\">
+                        <h3>#4</h3>
+                        <p>Les vêtements sont triés.<br> Les vêtements en bon état sont mis en vente sur le site et votre cagnotte sera créditée de «boutons». <br> Les vêtements abîmés sont utilisés comme matière première pour confectionner d’autres vêtements.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_ECRANS_133x74.png\" class=\"mb-2\">
+                        <h3>#5</h3>
+                        <p>Choisissez sur le site les vêtements que vous souhaitez commander.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_ACHAT_240x200.png\" class=\"mb-2\">
+                        <h3>#6</h3>
+                        <p>Vous pouvez payer vos achats , en ligne,en «boutons»  (+1€ par vêtement) ou bien directement en euros.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_RDV_134x74.png\" class=\"mb-2\">
+                        <h3>#7</h3>
+                        <p>Choisissez sur le site à quelle école et quel jour vous souhaitez récupérer votre commande.</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_CAMION_134x74.png\" class=\"mb-2\">
+                        <h3>#8</h3>
+                        <p>Le véhicule de livraison vous livre votre commande (2€ par livraison).</p>
+                        <p class=\"pb-3\"> _____________________________<p>
+                        <img src=\"http://127.0.0.1:8000/images/Icone_SAC_134x115.png\" class=\"mb-2\">
+                        <h3>#9</h3>
+                        <p>Récupérez votre commande  dans un sac de livraison. </p>
+                    </div>
+                <br>
+                <a href=\"#section2\"><img src=\"http://127.0.0.1:8000/images/Icone_Chevron.png\"></a>
+                <br>
+    
         </div>
 
-        <!-- Section 3 : Déjà inscrit ou Nouveau ? -->
-        <div id=\"section3\">
-            <div class=\"row mb-4 mx-1\">
+<!-- Section 2 : Déjà inscrit ou Nouveau ? -->
+        <div id=\"section2\">
+            <div class=\"row mb-2 mx-1\">
                 <div class=\"col-md-6 button my-3\">
                     <a href=\"{{ path('member_new') }}\">
                         <h3>J’ai pas encore donné.</h3>
@@ -309,18 +291,20 @@ class __TwigTemplate_fe8969b50b35248029a90e5c532e8b3bfcda2f4722bd05770c67b97eba3
             </div>
         </div>
 
-        <!-- Section 4 : Les tournées -->
-        <div id=\"section4\">
-            <div class=\"row mb-4 mx-1\">
+ <!-- Section 3 : Les tournées -->
+        <div id=\"section3\">
+            <div class=\"row mb-2 mx-1\">
                 <div class=\"col-md-6 button my-3\">
                     <a href=\"{{ path('article_selection') }}\">
-                        <h3>Je veux profiter des bonnes affaires.</h3>
+                        <h3>Je profite des bonnes affaires.</h3>
+                        <h4></h4>
                         <p>Je découvre la sélection</p>
                     </a>
                 </div>
                 <div class=\"col-md-6 button my-3\">
                     <a href=\"{{ path('workshop_index') }}\">
-                        <h3>Je veux participer ou me former.</h3>
+                        <h3>Je participe ou je me forme.</h3>
+                        <h4></h4>
                         <p>Je découvre l'atelier \"couture\"</p>
                     </a>
                 </div>
@@ -334,6 +318,6 @@ class __TwigTemplate_fe8969b50b35248029a90e5c532e8b3bfcda2f4722bd05770c67b97eba3
 
      </div>
 
-{% endblock %}", "concept.html.twig", "/Users/marie-aude/Desktop/Sauvegarde TMK 311018/templates/concept.html.twig");
+{% endblock %}", "concept.html.twig", "/Users/marie-aude/Desktop/TMK/templates/concept.html.twig");
     }
 }

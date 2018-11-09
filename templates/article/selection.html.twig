@@ -5,9 +5,11 @@
 {% block body %}
 
 <!-- Section 1 :  Photo + accroche -->
-<div id="section1" class="jetrouve-image section1-image">
-    <h3 class="blue section1-title">Acheter des vêtements de seconde main, c’est important ...</h3>
-    <a href="#section2"><img src="http://127.0.0.1:8000/images/Icone_Chevron.png"></a>
+<div id="section1" class="jetrouve-image page-image">
+    <a href="#section2" class="page-title blue">
+    <h3>Acheter des vêtements de seconde main, c’est important ...</h3>
+    <img src="http://127.0.0.1:8000/images/Icone_Chevron.png">
+    </a>
 </div>
 <br>
         
@@ -16,7 +18,8 @@
 
 
         <!-- Section 2 :  4 arguments -->
-        <div id="section2">
+        <span class="anchor" id="section2"></span>
+        <div class="page-section">
             <div class="row justify-content-center">
                 <div class="col-lg-5 m-3">
                         <img src="http://127.0.0.1:8000/images/Icone_RECYCLAGE_133x74.png" class="mb-2">
@@ -37,7 +40,7 @@
                 </div>
                 <div class="col-lg-5 m-3">
                 <img src="http://127.0.0.1:8000/images/Icone_ECRANS_133x74.png" class="mb-2">
-                        <h3 class="orange mb-2">Pour me simplifier la vie ...</h3>
+                        <h3 class="orange mb-2">Pour se simplifier la vie ...</h3>
                         <p>Vous pouvez accéder 24H/24H à la sélection TROC & Mode Kids sur votre ordinateur, tablette ou smartphone. Choisissez ce qu’il vous plaît, on vous prépare ensuite un sac que l’on vous remettra sur à l’endroit et date que vous aurez choisis.</p>
                 </div>
             </div>
@@ -68,7 +71,7 @@
         </div>
 
         <!-- Section 4 : Catalogue -->
-        <div class="row">
+        <div class="row mb-3">
             <div class="col-md-3">
                 {% if app.session.get('user') %}
                     <h3>Préselection</h3>
@@ -150,30 +153,34 @@
                 <h3>Articles prochainement disponibles ...</h3>
                     <div class="row">
                         {% for article in articles %}
-                        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                            <div class="pola">
-                                {# <a title="{{ article.articleType.TypeName }} - {{ article.articleGender.GenderName }} - {{ article.articleSize.SizeName }}" href="{{ path('article_show', {'id': article.id}) }}"><img src="{{ asset('uploads/pictures/' ~ article.articlePicture1)}}" alt=""> #}
-                                <a href="{{ path('article_show', {'id': article.id}) }}"><img class="pola-picture" src="{{ asset('uploads/pictures/' ~ article.articlePicture1)}}" alt="">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                <a href="{{ path('article_show', {'id': article.id}) }}">
+                                <div class="pola mb-3">
                                     <div class="pola-body">
-                                        <div class="row justify-content-center d-flex align-items-center">
-                                            <div class="col-md-12 px-0">
-                                                <h4 >{{ article.articleType.TypeName }} {{ article.articleBrand.BrandName |upper }}</h4>
-                                            </div>
+                                        <div class="pb-3">
+                                            <img class="pola-picture" src="{{ asset('uploads/pictures/' ~ article.articlePicture1)}}" alt="">
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-7 px-0">
-                                                <h4>{{ article.articleGender.GenderName }} {{ article.articleSize.SizeName }}</h4>
+                                        <div class="pola-text">
+                                            <div class="row justify-content-center d-flex align-items-center">
+                                                <div class="col-md-12 px-0">
+                                                    <h4 >{{ article.articleType.TypeName }} {{ article.articleBrand.BrandName |upper }}</h4>
+                                                </div>
                                             </div>
-                                            <div class="col-md-5">
-                                                <div class="row px-1 align-items-center">
-                                                <h4 class="pt-2 mr-1">{{ article.articlebuttonValue }}</h4>
-                                                <img src="http://127.0.0.1:8000/images/Icone_BOUTON_BLEU_45X45.png" alt="Boutons" width="50%" height="50%">
+                                            <div class="row">
+                                                <div class="col-md-7 px-0 py-0 agegender">
+                                                    <h4>{{ article.articleGender.GenderName }}<br>{{ article.articleSize.SizeName }}</h4>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="row px-1 align-items-center">
+                                                    <h4 class="pt-2 mr-1">{{ article.articlebuttonValue }}</h4>
+                                                    <img class="pola-buttonmoney" src="http://127.0.0.1:8000/images/Icone_BOUTON_BLEU_45X45.png" alt="Boutons">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 </a>
-                            </div>
                         </div>
                         {% else %}
                         <p>Nous n'avons plus d'articles dans vos critères actuellement. Réessayez prochainement !</p>

@@ -7,9 +7,11 @@
 <!-- Page Content -->
 
 <!-- Section 1 :  Photo + accroche -->
-<div id="section1" class="jedonne-image section1-image">
-    <h3 class="white section1-title">Donner vos vêtements à TROC & Mode Kids, c’est utile et facile ...</h3>
-    <a href="#section2"><img src="http://127.0.0.1:8000/images/Icone_Chevron.png"></a>
+<div id="section1" class="jedonne-image page-image">
+    <a href="#section2" class="page-title orange">
+    <h3>Donner vos vêtements à TROC & Mode Kids, c’est utile et facile ...</h3>
+    <img src="http://127.0.0.1:8000/images/Icone_Chevron.png">
+    </a>
 </div>
 <br>
     
@@ -17,26 +19,27 @@
 <div class="container">
         
         <!-- Section 2 :  4 arguments -->
-        <div id="section2">
+        <span class="anchor" id="section2"></span>
+        <div class="page-section">
             <div class="row justify-content-center">
-                <div class="col-lg-5 m-3">
+                <div class="col-lg-5 mx-3 my-2">
                         <img src="http://127.0.0.1:8000/images/Icone_CAMION_133x74.png" class="mb-2">
                         <h3 class="orange mb-2">On s’occupe de tout !</h3>
                         <p>Chaque mois, un véhicule de collecte vient récupérer vos dons sur les parkings des écoles. Plus besoin de vous déplacer !</p>
                 </div>
-                <div class="col-lg-5 m-3">
+                <div class="col-lg-5 mx-3 my-2">
                     <img src="http://127.0.0.1:8000/images/Icone_CINTRE_133x74.png" class="mb-2">
                         <h3 class="orange mb-2">On récupère TOUS les vêtements !</h3>
                         <p>Quelque soit leur état (neufs, en bon état, abîmés), les vêtements seront triés et auront une seconde vie ! Ils doivent juste être lavés et remis dans un sac de dons Troc&Mode kids. Attention : nous nous récupèrons pas les chaussures !</p>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-5 m-3">
+                <div class="col-lg-5 mx-3 my-2">
                 <img src="http://127.0.0.1:8000/images/Icone_BOUTONS_133x74.png" class="mb-2">
                         <h3 class="orange mb-2">On vous récompense en «boutons» de troc !</h3>
                         <p>En fonction du type de vêtement et de son état, chaque don est récompensé par des «boutons» de troc, dans votre cagnotte ! Ces «boutons» vous permettront d’accéder à d’autres vêtements.</p>
                 </div>
-                <div class="col-lg-5 m-3">
+                <div class="col-lg-5 mx-3 my-2">
                 <img src="http://127.0.0.1:8000/images/Icone_COEUR_133x74.png" class="mb-2">
                         <h3 class="orange mb-2">C’est une bonne action !</h3>
                         <p>Donner des vêtements de seconde main permet de limiter le gaspillage vestimentaire et de faire un geste pour la planète ! Cela permet à tous d’accéder à un grand choix de vêtements !</p>
@@ -49,16 +52,17 @@
         </div>
 
         <!-- Section 3 : Déjà inscrit ou Nouveau ? -->
-        <div id="section3">
+        <span class="anchor" id="section3"></span>
+        <div class="page-section">
             <div class="row mb-4 mx-1">
-                <div class="col-md-6 button my-3">
+                <div class="col-md-6 button my-2">
                     <a href="{{ path('member_new') }}">
                         <h3>J’ai pas encore donné.</h3>
                         <h4>Comment récupérer mon sac de don ?</h4>
                         <p>Je m'inscris</p>
                     </a>
                 </div>
-                <div class="col-md-6 button my-3">
+                <div class="col-md-6 button my-2">
                     <a href="{{ path('member_setSession') }}">
                         <h3>J’ai déjà donné.</h3>
                         <h4>Combien de boutons ai-je dans ma cagnotte ?</h4>
@@ -69,7 +73,7 @@
         </div>
 
         <!-- Section 4 : Les tournées -->
-      <div class="row justify-content-center">
+      <div class="row justify-content-center page-section">
         <div class="col-lg-5 my-3 mx-4">
           <div class="row justify-content-center d-flex align-items-center">
             <div class="col-lg-4">

@@ -42,6 +42,12 @@ h3, .h3 {
   font-size: 1.25rem;
 }
 
+@media (max-width: 600px) {
+  .h3 {
+  font-size: 1rem;
+  }
+}
+
 h4, .h4 {
   font-size: 0.75rem;
 }
@@ -117,7 +123,8 @@ a:hover {
   align-items: center;
   padding: 2rem;
   background:url(http://127.0.0.1:8000/images/Icone_etiquette_BLEU.png) center no-repeat;
-  background-size: 100% auto ;
+  background-size: 80% auto ;
+  /* background-clip: padding-box; */
   border: none;
 }
 
@@ -125,19 +132,19 @@ a:hover {
   background-image:url(http://127.0.0.1:8000/images/Icone_etiquette_ORANGE.png);
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
+  .button {
+  background-size: 95% auto ;
+  }
+}
+
+@media (max-width: 767px) {
   .button {
   background-size: 70% auto ;
   }
 }
 
-@media (max-width: 768px) {
-  .button {
-  background-size: 60% auto ;
-  }
-}
-
-@media (max-width: 564px) {
+@media (max-width: 480px) {
   .button {
   background-size: 100% auto ;
   }
@@ -146,34 +153,50 @@ a:hover {
 /* HOME PAGE */
 
 .carousel-item{
-  height: 65vh;
-  min-height: 300px;
+  /* height: 85vh; */
   background: no-repeat center center scroll;
-  -webkit-background-size: cover;
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
+  background-size: 100% auto;
+  height: 500px;
+}
+
+@media (max-width: 992px) {
+  .carousel-item{
+  height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+  height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-item {
+  height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+  height: 250px;
+  }
 }
 
 .carousel-image1{
   background-image:url(http://127.0.0.1:8000/images/Je_donne.jpg);
-  background-size: contain;
-  height: 400px;
 }
 
 .carousel-image2{
   background-image:url(http://127.0.0.1:8000/images/Je_trouve.jpg);
-  background-size: contain;
-  height: 400px;
-}
-.carousel-image3{
-  background-image :url(http://127.0.0.1:8000/images/Je_participe.jpg);
-  background-size: contain;
-  height: 400px;
 }
 
-.portfolio_item{
-margin-bottom:30px;
+.carousel-image3{
+  background-image :url(http://127.0.0.1:8000/images/Je_participe.jpg);
 }
 
 .logo{
@@ -261,14 +284,142 @@ margin-bottom:30px;
   color:white;
 }
 
-/* JE DONNE PAGE */
 
-.jedonne_image{
-  background-image:url(http://127.0.0.1:8000/images/Je_donne.jpg);
+.page-image{
+  background: no-repeat center center scroll;
   background-size: 100% auto;
-  height: 400px;
+  height: 500px;
 }
 
-.jedonne_title{
- padding-top: 350px;
+@media (max-width: 992px) {
+  .page-image{
+  height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-image {
+  height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-image {
+  height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-image {
+  height: 250px;
+  }
+}
+
+/* CORE PAGE */
+
+.page-title{
+  position: absolute;
+  right: 15%;
+  top:150px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.anchor{
+  display: block;
+  height: 110px; /*same height as nav bar*/
+  margin-top: -110px; /*same height nav barr*/
+  visibility: hidden;
+}
+
+/* .page-image{
+}
+
+.page-section{
+} */
+
+/* JE DONNE PAGE */
+
+.jedonne-image{
+  background-image:url(http://127.0.0.1:8000/images/Je_donne.jpg);
+}
+
+/* CONCEPT PAGE */
+
+.concept-image{
+  background-image:url(http://127.0.0.1:8000/images/Cercle.png);
+  background-size: 100% auto ;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+/* JE TROUVE PAGE */
+
+.jetrouve-image{
+  background-image:url(http://127.0.0.1:8000/images/Je_trouve.jpg);
+  background-position: center top;
+}
+
+.pola {
+  position: relative;
+  width: 100%;
+}
+ 
+.pola-body {
+  width: 100%;
+  border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+     -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+  /* padding-bottom: 10px; */
+}
+
+.pola-picture {
+  width: 100%;
+  /* padding-bottom: 10px; */
+}
+ 
+.pola-text {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  color: #888;
+  padding-right: 20px;
+}
+
+.pola-buttonmoney {
+  width: 50%;
+  height: 50%;
+}
+@media (max-width: 768px) {
+  .pola-buttonmoney {
+  width: 15%;
+  height: 15%;
+  }
+}
+
+@media (max-width: 600px) {
+  .pola-buttonmoney {
+  width: 10%;
+  height: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pola-buttonmoney {
+  width: 5%;
+  height: 5%;
+  }
+}
+/* JE PARTICIPE */
+
+.jeparticipe-image{
+  background-image:url(http://127.0.0.1:8000/images/Je_participe.jpg);
 }
