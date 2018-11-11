@@ -399,22 +399,16 @@ a:hover {
 }
 @media (max-width: 768px) {
   .pola-buttonmoney {
-  width: 25%;
+  width: 30%;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .pola-buttonmoney {
-  width: 10%;
+  width: 20%;
   }
 }
 
-@media (max-width: 480px) {
-  .pola-buttonmoney {
-  width: 5%;
-  height: 5%;
-  }
-}
 /* JE PARTICIPE */
 
 .jeparticipe-image{

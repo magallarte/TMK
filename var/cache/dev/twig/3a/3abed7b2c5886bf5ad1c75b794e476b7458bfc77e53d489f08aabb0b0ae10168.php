@@ -396,7 +396,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                                         </div>
                                         <div class=\"pola-text pt-3\">
                                             <div class=\"row justify-content-center\">
-                                                <div class=\"col-md-12 col-sm-12 col-xs-12 px-0\">
+                                                <div class=\"col-md-12 col-sm-12 col-12 px-0\">
                                                     <h4 >";
             // line 166
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "articleType", array()), "TypeName", array()), "html", null, true);
@@ -406,7 +406,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                                                 </div>
                                             </div>
                                             <div class=\"row\">
-                                                <div class=\"col-md-7 col-sm-7 col-xs-3 px-0 py-0\">
+                                                <div class=\"col-md-7 col-sm-7 col-7 px-0 py-0\">
                                                     <h4>";
             // line 171
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "articleGender", array()), "GenderName", array()), "html", null, true);
@@ -414,7 +414,7 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "articleSize", array()), "SizeName", array()), "html", null, true);
             echo "</h4>
                                                 </div>
-                                                <div class=\"col-md-5 col-sm-5 col-xs-2\">
+                                                <div class=\"col-md-5 col-sm-5 col-5\">
                                                     <div class=\"row px-1 align-items-center\">
                                                     <h4 class=\"pt-2 mr-1\">";
             // line 175
@@ -672,15 +672,15 @@ class __TwigTemplate_61aeb1135a246ae49dfc7d9a5a2844315f37dde10d0250e3c443dc7c717
                                         </div>
                                         <div class=\"pola-text pt-3\">
                                             <div class=\"row justify-content-center\">
-                                                <div class=\"col-md-12 col-sm-12 col-xs-12 px-0\">
+                                                <div class=\"col-md-12 col-sm-12 col-12 px-0\">
                                                     <h4 >{{ article.articleType.TypeName }} {{ article.articleBrand.BrandName |upper }}</h4>
                                                 </div>
                                             </div>
                                             <div class=\"row\">
-                                                <div class=\"col-md-7 col-sm-7 col-xs-3 px-0 py-0\">
+                                                <div class=\"col-md-7 col-sm-7 col-7 px-0 py-0\">
                                                     <h4>{{ article.articleGender.GenderName }}<br>{{ article.articleSize.SizeName }}</h4>
                                                 </div>
-                                                <div class=\"col-md-5 col-sm-5 col-xs-2\">
+                                                <div class=\"col-md-5 col-sm-5 col-5\">
                                                     <div class=\"row px-1 align-items-center\">
                                                     <h4 class=\"pt-2 mr-1\">{{ article.articlebuttonValue }}</h4>
                                                     <img class=\"pola-buttonmoney\" src=\"http://127.0.0.1:8000/images/Icone_BOUTON_BLEU_45X45.png\" alt=\"Boutons\">
