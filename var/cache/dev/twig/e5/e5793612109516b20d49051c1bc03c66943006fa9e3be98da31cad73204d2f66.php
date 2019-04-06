@@ -200,11 +200,13 @@ class __TwigTemplate_e979665cf3f7739da01b16cceac4a70553033edac30feeb61895b03da35
                         </tr>
                     </tbody>
                 </table>
-                <div>
-                    <a href=\"";
-        // line 85
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delivery_bag_addToCart", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 85, $this->source); })()), "id", array()))), "html", null, true);
-        echo "\" class=\"btn btn-primary\">Ajouter au panier</a>
+                ";
+        // line 87
+        echo "                <div class=\"row justify-content-center d-flex align-items-center\">
+                        <a href=\"";
+        // line 88
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delivery_bag_addToCart", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 88, $this->source); })()), "id", array()))), "html", null, true);
+        echo "\" class=\"col-md-6 button h3\">Ajouter au panier</a>
                 </div>
             </div>
       </div>
@@ -215,45 +217,45 @@ class __TwigTemplate_e979665cf3f7739da01b16cceac4a70553033edac30feeb61895b03da35
     <!-- /.container -->
 
     ";
-        // line 95
-        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 95, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
-            // line 96
+        // line 98
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 98, $this->source); })()), "session", array()), "get", array(0 => "user"), "method")) {
+            // line 99
             echo "        ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 96, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 99, $this->source); })()), "session", array()), "get", array(0 => "user"), "method"), "MemberRole", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 97
+                // line 100
                 echo "            ";
                 if ((twig_get_attribute($this->env, $this->source, $context["role"], "id", array()) == "6")) {
-                    // line 98
+                    // line 101
                     echo "                 <div display=\"inline-block\">
             <a href=\"";
-                    // line 99
+                    // line 102
                     echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
                     echo "\">Liste de tous les articles</a>
             <p> - </p>
             <a href=\"";
-                    // line 101
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 101, $this->source); })()), "id", array()))), "html", null, true);
+                    // line 104
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 104, $this->source); })()), "id", array()))), "html", null, true);
                     echo "\">Modifier</a>
             <p> - </p>
             <a href=\"";
-                    // line 103
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 103, $this->source); })()), "id", array()))), "html", null, true);
+                    // line 106
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 106, $this->source); })()), "id", array()))), "html", null, true);
                     echo "\">Supprimer</a>
         </div>
             ";
                 }
-                // line 106
+                // line 109
                 echo "        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 107
+            // line 110
             echo "    ";
         }
-        // line 108
+        // line 111
         echo "
 ";
         
@@ -276,7 +278,7 @@ class __TwigTemplate_e979665cf3f7739da01b16cceac4a70553033edac30feeb61895b03da35
 
     public function getDebugInfo()
     {
-        return array (  257 => 108,  254 => 107,  248 => 106,  242 => 103,  237 => 101,  232 => 99,  229 => 98,  226 => 97,  221 => 96,  219 => 95,  206 => 85,  198 => 80,  191 => 76,  186 => 73,  177 => 71,  173 => 70,  168 => 67,  159 => 65,  155 => 64,  148 => 60,  139 => 54,  131 => 53,  114 => 39,  108 => 36,  99 => 29,  89 => 19,  83 => 16,  78 => 13,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
+        return array (  259 => 111,  256 => 110,  250 => 109,  244 => 106,  239 => 104,  234 => 102,  231 => 101,  228 => 100,  223 => 99,  221 => 98,  208 => 88,  205 => 87,  198 => 80,  191 => 76,  186 => 73,  177 => 71,  173 => 70,  168 => 67,  159 => 65,  155 => 64,  148 => 60,  139 => 54,  131 => 53,  114 => 39,  108 => 36,  99 => 29,  89 => 19,  83 => 16,  78 => 13,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -364,8 +366,11 @@ class __TwigTemplate_e979665cf3f7739da01b16cceac4a70553033edac30feeb61895b03da35
                         </tr>
                     </tbody>
                 </table>
-                <div>
+                {# <div>
                     <a href=\"{{ path('delivery_bag_addToCart', {'id': article.id}) }}\" class=\"btn btn-primary\">Ajouter au panier</a>
+                </div> #}
+                <div class=\"row justify-content-center d-flex align-items-center\">
+                        <a href=\"{{ path('delivery_bag_addToCart', {'id': article.id}) }}\" class=\"col-md-6 button h3\">Ajouter au panier</a>
                 </div>
             </div>
       </div>
@@ -392,6 +397,6 @@ class __TwigTemplate_e979665cf3f7739da01b16cceac4a70553033edac30feeb61895b03da35
 {% endblock %}
 
 
-    ", "article/show.html.twig", "/Users/marie-aude/Desktop/Sauvegarde TMK 311018/templates/article/show.html.twig");
+    ", "article/show.html.twig", "/Users/marie-aude/Desktop/TMK/templates/article/show.html.twig");
     }
 }

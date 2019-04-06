@@ -81,8 +81,11 @@
                         </tr>
                     </tbody>
                 </table>
-                <div>
+                {# <div>
                     <a href="{{ path('delivery_bag_addToCart', {'id': article.id}) }}" class="btn btn-primary">Ajouter au panier</a>
+                </div> #}
+                <div class="row justify-content-center d-flex align-items-center">
+                        <a href="{{ path('delivery_bag_addToCart', {'id': article.id}) }}" class="col-md-6 button h3">Ajouter au panier</a>
                 </div>
             </div>
       </div>

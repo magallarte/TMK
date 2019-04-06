@@ -94,26 +94,110 @@ class __TwigTemplate_bede9f51d4ec7fb2a4f0be38f25731eb71769e350d3d2a39daf4f9872ee
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 77, $this->source); })()), 'form_start');
         echo "
     ";
-        // line 78
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 78, $this->source); })()), 'widget');
-        echo "
-    ";
+        // line 79
+        echo "    <div class=\"row justify-content-center\">
+        <div class=\"pola-body col-lg-5 my-3 mx-4\">
+      ";
         // line 81
-        echo "  <div>  
-    ";
-        // line 82
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 82, $this->source); })()), "article_fabric", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 81, $this->source); })()), "article_picture1", array()), 'row');
         echo "
-    <a href=\"#\" id=\"add_fabric\" class=\"btn btn-secondary\">Ajouter un tissu</a> 
-  </div>
+      ";
+        // line 82
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 82, $this->source); })()), "article_picture2", array()), 'row');
+        echo "
+        </div>
+          <div class=\"col-lg-5 my-3 mx-4\">
+                <div class=\"row justify-content-center d-flex align-items-top\">
+                    <div class=\"col-lg-3\">
+                        ";
+        // line 87
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 87, $this->source); })()), "article_gender", array()), 'row');
+        echo "
+                    </div>
+                    <div class=\"col-lg-6\">
+                        ";
+        // line 90
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 90, $this->source); })()), "article_type", array()), 'row');
+        echo "
+                    </div>
+                    <div class=\"col-lg-3\">
+                        ";
+        // line 93
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 93, $this->source); })()), "article_size", array()), 'row');
+        echo "
+                    </div>
+                </div>
+                <div class=\"row justify-content-center d-flex align-items-top\">
+                    <div class=\"col-lg-4\">
+                        ";
+        // line 98
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 98, $this->source); })()), "article_brand", array()), 'row');
+        echo "
+                    </div>
+                    <div class=\"col-lg-4\">
+                    ";
+        // line 101
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 101, $this->source); })()), "article_color", array()), 'row');
+        echo "
+                    </div>
+                    <div class=\"col-lg-4\">
+                    ";
+        // line 104
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 104, $this->source); })()), "article_wearStatus", array()), 'row');
+        echo "
+                    </div>
+                </div>
+                <div class=\"row justify-content-center d-flex align-items-top\">                  
+                    ";
+        // line 108
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 108, $this->source); })()), "article_season", array()), 'row');
+        echo "
+                </div>
+                <div class=\"row justify-content-center d-flex align-items-top\">
+                    <div class=\"col-lg-4\">
+                      ";
+        // line 112
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 112, $this->source); })()), "article_processStatus", array()), 'row');
+        echo "
+                    </div>
+                    <div class=\"col-lg-4\">
+                      ";
+        // line 115
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 115, $this->source); })()), "article_eurosValue", array()), 'row');
+        echo "
+                    </div>
+                    <div class=\"col-lg-4\">
+                      ";
+        // line 118
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 118, $this->source); })()), "article_buttonValue", array()), 'row');
+        echo "
+                    </div>
+                </div>
+                <div class=\"row justify-content-center d-flex align-items-top\">
+                    <div class=\"col-lg-6\">
+                      ";
+        // line 123
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 123, $this->source); })()), "article_comments", array()), 'row');
+        echo "
+                    </div>
+                    <div class=\"col-lg-6\">
+                      ";
+        // line 126
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 126, $this->source); })()), "article_fabric", array()), 'row');
+        echo "
+                       <a href=\"#\" id=\"add_fabric\" class=\"btn btn-secondary\">Ajouter un tissu</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
   <br>
   <button class=\"btn btn-primary\">";
-        // line 86
-        echo twig_escape_filter($this->env, (((isset($context["button_label"]) || array_key_exists("button_label", $context))) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new Twig_Error_Runtime('Variable "button_label" does not exist.', 86, $this->source); })()), "Sauvegarder")) : ("Sauvegarder")), "html", null, true);
+        // line 133
+        echo twig_escape_filter($this->env, (((isset($context["button_label"]) || array_key_exists("button_label", $context))) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new Twig_Error_Runtime('Variable "button_label" does not exist.', 133, $this->source); })()), "Sauvegarder")) : ("Sauvegarder")), "html", null, true);
         echo "</button>
 ";
-        // line 87
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 87, $this->source); })()), 'form_end');
+        // line 134
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 134, $this->source); })()), 'form_end');
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -134,7 +218,7 @@ class __TwigTemplate_bede9f51d4ec7fb2a4f0be38f25731eb71769e350d3d2a39daf4f9872ee
 
     public function getDebugInfo()
     {
-        return array (  116 => 87,  112 => 86,  105 => 82,  102 => 81,  98 => 78,  94 => 77,  88 => 73,  78 => 49,  37 => 8,  33 => 5,  29 => 1,);
+        return array (  200 => 134,  196 => 133,  186 => 126,  180 => 123,  172 => 118,  166 => 115,  160 => 112,  153 => 108,  146 => 104,  140 => 101,  134 => 98,  126 => 93,  120 => 90,  114 => 87,  106 => 82,  102 => 81,  98 => 79,  94 => 77,  88 => 73,  78 => 49,  37 => 8,  33 => 5,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -216,15 +300,62 @@ class __TwigTemplate_bede9f51d4ec7fb2a4f0be38f25731eb71769e350d3d2a39daf4f9872ee
 
 
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    {# Le formulaire reste globalement le même,
-   On ne rajoute que le champ tissu et le lien pour en ajouter #}
-  <div>  
-    {{ form_row(form.article_fabric) }}
-    <a href=\"#\" id=\"add_fabric\" class=\"btn btn-secondary\">Ajouter un tissu</a> 
-  </div>
+    {# {{ form_widget(form) }} #}
+    <div class=\"row justify-content-center\">
+        <div class=\"pola-body col-lg-5 my-3 mx-4\">
+      {{ form_row(form.article_picture1) }}
+      {{ form_row(form.article_picture2) }}
+        </div>
+          <div class=\"col-lg-5 my-3 mx-4\">
+                <div class=\"row justify-content-center d-flex align-items-top\">
+                    <div class=\"col-lg-3\">
+                        {{ form_row(form.article_gender) }}
+                    </div>
+                    <div class=\"col-lg-6\">
+                        {{ form_row(form.article_type) }}
+                    </div>
+                    <div class=\"col-lg-3\">
+                        {{ form_row(form.article_size) }}
+                    </div>
+                </div>
+                <div class=\"row justify-content-center d-flex align-items-top\">
+                    <div class=\"col-lg-4\">
+                        {{ form_row(form.article_brand) }}
+                    </div>
+                    <div class=\"col-lg-4\">
+                    {{ form_row(form.article_color) }}
+                    </div>
+                    <div class=\"col-lg-4\">
+                    {{ form_row(form.article_wearStatus) }}
+                    </div>
+                </div>
+                <div class=\"row justify-content-center d-flex align-items-top\">                  
+                    {{ form_row(form.article_season) }}
+                </div>
+                <div class=\"row justify-content-center d-flex align-items-top\">
+                    <div class=\"col-lg-4\">
+                      {{ form_row(form.article_processStatus) }}
+                    </div>
+                    <div class=\"col-lg-4\">
+                      {{ form_row(form.article_eurosValue) }}
+                    </div>
+                    <div class=\"col-lg-4\">
+                      {{ form_row(form.article_buttonValue) }}
+                    </div>
+                </div>
+                <div class=\"row justify-content-center d-flex align-items-top\">
+                    <div class=\"col-lg-6\">
+                      {{ form_row(form.article_comments) }}
+                    </div>
+                    <div class=\"col-lg-6\">
+                      {{ form_row(form.article_fabric) }}
+                       <a href=\"#\" id=\"add_fabric\" class=\"btn btn-secondary\">Ajouter un tissu</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
   <br>
   <button class=\"btn btn-primary\">{{ button_label|default('Sauvegarder') }}</button>
-{{ form_end(form) }}", "article/_form.html.twig", "/Users/marie-aude/Desktop/Sauvegarde TMK 311018/templates/article/_form.html.twig");
+{{ form_end(form) }}", "article/_form.html.twig", "/Users/marie-aude/Desktop/TMK/templates/article/_form.html.twig");
     }
 }

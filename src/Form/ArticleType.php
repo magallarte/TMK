@@ -84,8 +84,16 @@ class ArticleType extends AbstractType
                     'label'  => 'Etape de traitement :',
                     'class' => 'App\Entity\ProcessStatus',
                     'choice_label' => 'ProcessStatusName'))
-            ->add('article_picture1', FileType::class, array('label' => 'Photo Recto(png)','data_class' => null))
-            ->add('article_picture2', FileType::class, array('label' => 'Photo Verso (png)','data_class' => null))
+            ->add('article_picture1', FileType::class, array(
+                        'label' => 'Photo Recto (png) :',
+                        'required'=>null,
+                        'attr' => ['placeholder' => 'Choisir une photo'],
+                        'data_class' => null))
+            ->add('article_picture2', FileType::class, array(
+                        'label' => 'Photo Verso (png) :',
+                        'required'=>null,
+                        'attr' => ['placeholder' => 'Choisir une photo'],
+                        'data_class' => null))
         ;
     }
 

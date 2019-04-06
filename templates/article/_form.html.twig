@@ -75,13 +75,60 @@
 
 
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    {# Le formulaire reste globalement le même,
-   On ne rajoute que le champ tissu et le lien pour en ajouter #}
-  <div>  
-    {{ form_row(form.article_fabric) }}
-    <a href="#" id="add_fabric" class="btn btn-secondary">Ajouter un tissu</a> 
-  </div>
+    {# {{ form_widget(form) }} #}
+    <div class="row justify-content-center">
+        <div class="pola-body col-lg-5 my-3 mx-4">
+      {{ form_row(form.article_picture1) }}
+      {{ form_row(form.article_picture2) }}
+        </div>
+          <div class="col-lg-5 my-3 mx-4">
+                <div class="row justify-content-center d-flex align-items-top">
+                    <div class="col-lg-3">
+                        {{ form_row(form.article_gender) }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ form_row(form.article_type) }}
+                    </div>
+                    <div class="col-lg-3">
+                        {{ form_row(form.article_size) }}
+                    </div>
+                </div>
+                <div class="row justify-content-center d-flex align-items-top">
+                    <div class="col-lg-4">
+                        {{ form_row(form.article_brand) }}
+                    </div>
+                    <div class="col-lg-4">
+                    {{ form_row(form.article_color) }}
+                    </div>
+                    <div class="col-lg-4">
+                    {{ form_row(form.article_wearStatus) }}
+                    </div>
+                </div>
+                <div class="row justify-content-center d-flex align-items-top">                  
+                    {{ form_row(form.article_season) }}
+                </div>
+                <div class="row justify-content-center d-flex align-items-top">
+                    <div class="col-lg-4">
+                      {{ form_row(form.article_processStatus) }}
+                    </div>
+                    <div class="col-lg-4">
+                      {{ form_row(form.article_eurosValue) }}
+                    </div>
+                    <div class="col-lg-4">
+                      {{ form_row(form.article_buttonValue) }}
+                    </div>
+                </div>
+                <div class="row justify-content-center d-flex align-items-top">
+                    <div class="col-lg-6">
+                      {{ form_row(form.article_comments) }}
+                    </div>
+                    <div class="col-lg-6">
+                      {{ form_row(form.article_fabric) }}
+                       <a href="#" id="add_fabric" class="btn btn-secondary">Ajouter un tissu</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
   <br>
   <button class="btn btn-primary">{{ button_label|default('Sauvegarder') }}</button>
 {{ form_end(form) }}

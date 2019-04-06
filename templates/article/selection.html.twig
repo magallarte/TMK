@@ -100,12 +100,14 @@
                         {% endfor %}
                     </select>
                     <br>
+                    <br>
                     {# <label for="selectionSize">Taille(s)</label> #}
                     <select name="selectionSize[]" id="selectionSize" multiple="true" expanded="false" class="form-control mdb-select selectpicker" multiple data-live-search="true" title="Taille" data-style="btn-select">
                         {% for size in sizes %}
                         <option value="{{size.id}}">{{size.sizeName}}</option>
                         {% endfor %}
                     </select>
+                    <br>
                     <br>
                     {# <label for="selectionType">Type(s) de vêtement</label> #}
                     <select name="selectionType[]" id="selectionType" multiple="multiple" class="form-control mdb-select selectpicker" multiple data-live-search="true" title="Type" data-style="btn-select">
@@ -114,12 +116,14 @@
                         {% endfor %}
                     </select>
                     <br>
+                    <br>
                     {# <label for="selectionSeason">Saison(s)</label> #}
                     <select name="selectionSeason[]" id="selectionSeason" multiple="multiple" class="form-control mdb-select selectpicker" multiple data-live-search="true" title="Saison" data-style="btn-select">
                         {% for season in seasons %}
                         <option value="{{season.id}}">{{season.seasonName}}</option>
                         {% endfor %}
                     </select>
+                    <br>
                     <br>
                     {# <label for="selectionColor">Couleur(s)</label> #}
                     <select name="selectionColor[]" id="selectionColor" multiple="multiple" class="form-control mdb-select selectpicker" multiple data-live-search="true" title="Couleur" data-style="btn-select">
@@ -128,12 +132,14 @@
                         {% endfor %}
                     </select>
                     <br>
+                    <br>
                     {# <label for="selectionBrand">Marque(s)</label> #}
                     <select name="selectionBrand[]" id="selectionBrand" multiple="multiple" class="form-control mdb-select selectpicker" multiple data-live-search="true" title="Marque" data-style="btn-select">
                         {% for brand in brands %}
                         <option value="{{brand.id}}">{{brand.brandName}}</option>
                         {% endfor %}
                     </select>
+                    <br>
                     <br>
                     {# <label for="selectionWearStatus">Etat usure(s)</label> #}
                     <select name="selectionWearStatus[]" id="selectionWearStatus" multiple="multiple" class="form-control mdb-select selectpicker" multiple data-live-search="true" title="Etat d'usure" data-style="btn-select">
@@ -150,7 +156,7 @@
             </div>
             <br> 
             <div class="col-md-9">
-                <h3>Articles prochainement disponibles ...</h3>
+                {# <h3>Articles prochainement disponibles ...</h3> #}
                     <div class="row">
                         {% for article in articles %}
                         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -172,8 +178,8 @@
                                                 </div>
                                                 <div class="col-md-5 col-sm-5 col-5">
                                                     <div class="row px-1 align-items-center">
-                                                    <h4 class="pt-2 mr-1">{{ article.articlebuttonValue }}</h4>
-                                                    <img class="pola-buttonmoney" src="http://127.0.0.1:8000/images/Icone_BOUTON_BLEU_45X45.png" alt="Boutons">
+                                                    <h3 class="pt-2 mr-1">{{ article.articlebuttonValue }} €</h3>
+                                                    {# <img class="pola-buttonmoney" src="http://127.0.0.1:8000/images/Icone_BOUTON_BLEU_45X45.png" alt="Boutons"> #}
                                                     </div>
                                                 </div>
                                             </div>
